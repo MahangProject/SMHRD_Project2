@@ -1,0 +1,33 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 22 Sep 2020 15:21:29 at http://nike747459.wixsite.com/mydiary +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://nike747459.wixsite.com/mydiary -O1 "C:\My Web Sites\projectwix0922" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+15:22:07	Error: 	"Not Found" (404) at link https://nike747459.wixsite.com/mydiary/decodeURIComponent(e (from https://nike747459.wixsite.com/mydiary)
+15:22:07	Error: 	"Not Found" (404) at link https://nike747459.wixsite.com/mydiary/_api/santa-members-server (from https://nike747459.wixsite.com/mydiary)
+15:22:07	Error: 	"Method Not Allowed" (405) at link https://nike747459.wixsite.com/mydiary/_api/wix-code-public-dispatcher/routers/data-binding (from https://nike747459.wixsite.com/mydiary)
+15:22:07	Warning: 	Moved Permanently for https://nike747459.wixsite.com/mydiary/$Version=1; $Path=/; SameSite=none; $Path=/
+15:22:07	Warning: 	File has moved from https://nike747459.wixsite.com/mydiary/$Version=1; $Path=/; SameSite=none; $Path=/ to https://nike747459.wixsite.com/mydiary/%24Version%3D1%3B-%24Path%3D/%3B-SameSite%3Dnone%3B-%24Path%3D
+15:22:08	Error: 	"Not Found" (404) at link https://nike747459.wixsite.com/ (from https://nike747459.wixsite.com/mydiary)
+15:22:08	Error: 	"Not Found" (404) at link https://nike747459.wixsite.com/mydiary/wix-thunderbolt/dist/ (from https://nike747459.wixsite.com/mydiary)
+15:22:08	Error: 	"Not Found" (404) at link https://nike747459.wixsite.com/mydiary/robots.txt (from https://nike747459.wixsite.com/mydiary)
+15:22:08	Error: 	"Not Found" (404) at link https://nike747459.wixsite.com/mydiary/feed.xml (from https://nike747459.wixsite.com/mydiary)
+15:22:08	Error: 	"Not Found" (404) at link https://nike747459.wixsite.com/mydiary/$&/ (from https://nike747459.wixsite.com/mydiary)
+15:22:08	Error: 	"Forbidden" (403) at link https://nike747459.wixsite.com/_partials/ (from https://nike747459.wixsite.com/mydiary)
+15:22:29	Error: 	"Not Found" (404) at link https://nike747459.wixsite.com/mydiary/%24Version%3D1%3B-%24Path%3D/%3B-SameSite%3Dnone%3B-%24Path%3D (from https://nike747459.wixsite.com/mydiary/$Version=1; $Path=/; SameSite=none; $Path=/)
+15:22:29	Warning: 	Moved Permanently for https://nike747459.wixsite.com/mydiary/; $Path=/; XSRF-TOKEN=1600755691|z90WYBP3c6Bq; $Path=/; hs=1533083887; $Path=/; $Path=/; SameSite=none; $Path=/
+15:22:29	Warning: 	File has moved from https://nike747459.wixsite.com/mydiary/; $Path=/; XSRF-TOKEN=1600755691|z90WYBP3c6Bq; $Path=/; hs=1533083887; $Path=/; $Path=/; SameSite=none; $Path=/ to https://nike747459.wixsite.com/mydiary/%3B-%24Path%3D/%3B-XSRF-TOKEN%3D1600755691%7Cz90WYBP3c6Bq%3B-%24Path%3D/%3B-hs%3D1533083887%3B-%24Path%3D/%3B-%24Path%3D/%3B-SameSite%3Dnone%3B-%24Path%3D
+15:22:30	Warning: 	Moved Permanently for https://nike747459.wixsite.com/mydiary/; $Path=/; $Path=/; SameSite=none; $Path=/
+15:22:30	Warning: 	File has moved from https://nike747459.wixsite.com/mydiary/; $Path=/; $Path=/; SameSite=none; $Path=/ to https://nike747459.wixsite.com/mydiary/%3B-%24Path%3D/%3B-%24Path%3D/%3B-SameSite%3Dnone%3B-%24Path%3D
+15:22:30	Error: 	"Not Found" (404) at link https://nike747459.wixsite.com/mydiary/POST (from https://nike747459.wixsite.com/mydiary/항아리-board)
+15:22:30	Warning: 	Moved Permanently for https://nike747459.wixsite.com/mydiary/; $Path=/; hs=1533083887; $Path=/; $Path=/; SameSite=none; $Path=/
+15:22:30	Warning: 	File has moved from https://nike747459.wixsite.com/mydiary/; $Path=/; hs=1533083887; $Path=/; $Path=/; SameSite=none; $Path=/ to https://nike747459.wixsite.com/mydiary/%3B-%24Path%3D/%3B-hs%3D1533083887%3B-%24Path%3D/%3B-%24Path%3D/%3B-SameSite%3Dnone%3B-%24Path%3D
+15:22:31	Error: 	"Not Found" (404) at link https://nike747459.wixsite.com/mydiary/%3B-%24Path%3D/%3B-XSRF-TOKEN%3D1600755691%7Cz90WYBP3c6Bq%3B-%24Path%3D/%3B-hs%3D1533083887%3B-%24Path%3D/%3B-%24Path%3D/%3B-SameSite%3Dnone%3B-%24Path%3D (from https://nike747459.wixsite.com/mydiary/; $Path=/; XSRF-TOKEN=1600755691|z90WYBP3c6Bq; $Path=/; hs=1533083887; $Path=/; $Path=/; SameSite=none; $Path=/)
+15:22:31	Error: 	"Not Found" (404) at link https://nike747459.wixsite.com/mydiary/%3B-%24Path%3D/%3B-%24Path%3D/%3B-SameSite%3Dnone%3B-%24Path%3D (from https://nike747459.wixsite.com/mydiary/; $Path=/; $Path=/; SameSite=none; $Path=/)
+15:22:31	Error: 	"Not Found" (404) at link https://nike747459.wixsite.com/mydiary/%3B-%24Path%3D/%3B-hs%3D1533083887%3B-%24Path%3D/%3B-%24Path%3D/%3B-SameSite%3Dnone%3B-%24Path%3D (from https://nike747459.wixsite.com/mydiary/; $Path=/; hs=1533083887; $Path=/; $Path=/; SameSite=none; $Path=/)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 2 seconds : 157 links scanned, 138 files written (24682149 bytes overall) [6268263 bytes received at 101101 bytes/sec], 24294542 bytes transferred using HTTP compression in 144 files, ratio 23%, 1.1 requests per connection
+(14 errors, 8 warnings, 0 messages)
