@@ -1,0 +1,11 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+nike747459.wixsite.com	TRUE	/mydiary	FALSE	1999999999	svSession	0f90d6e55f3d74189677538424de1d0a116c9af3d5322a03b3d96a75f8eeafbc766f63ace0fda06f0a66bbb04a3796b01e60994d53964e647acf431e4f798bcdc9b2e254ff250bd83c9d63b64400de58831b90ebdcf2c653549cbeeaded257e8
+nike747459.wixsite.com	TRUE	/mydiary	FALSE	1999999999	TS01bb07f2	01b84e286ae3bdfa9f4023f80e346f811fe854e6ef18ab1d7ac9543777c2aa7550217840b9244bb1ada5626cca751f682d046d5b95f99d25b72cf809aab74a653fed419ebe
+glockenspiel-wolverine-6dxj.squarespace.com	TRUE	/	FALSE	1999999999	crumb	BXhzrkpe95+iZWQxMWZlZTAxNjQ1NGU3ZTgwNzlhYmEzOTA2ZmE5
+nike747459.wixsite.com	TRUE	/	FALSE	1999999999	XSRF-TOKEN	1600832193|t8OqTfXAamlt
+nike747459.wixsite.com	TRUE	/	FALSE	1999999999	ssr-caching	cache#desc=miss#varnish=miss#dc#desc=96"
+nike747459.wixsite.com	TRUE	/	FALSE	1999999999	hs	522589813
+.wixsite.com	TRUE	/	FALSE	1999999999	TS016e3841	01b84e286a8e1a5d2117419fb56f376e06bb138e9218ab1d7ac9543777c2aa7550217840b9508e0ceea9bcfe7fa65d9369f59098c287e3eb4c9340462fe044296941c8c964ffc4b782280d622284c4fbf67e54846f5467df27755f799ec07c7797714a184b
+nike747459.wixsite.com	TRUE	/	FALSE	1999999999	SameSite	none
+

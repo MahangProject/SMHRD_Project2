@@ -1,0 +1,3 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+20:07:16	0/0	---MC-	301	error ('Moved%20Permanently')	text/html	date:Tue,%2022%20Sep%202020%2011:07:16%20GMT	http://glockenspiel-wolverine-6dxj.squarespace.com/robots.txt		(from )
+20:07:17	0/0	---MC-	301	error ('Moved%20Permanently')	text/html	date:Tue,%2022%20Sep%202020%2011:07:17%20GMT	http://glockenspiel-wolverine-6dxj.squarespace.com/	C:/My%20Web%20Sites/test8/glockenspiel-wolverine-6dxj.squarespace.com/index.html	(from )
