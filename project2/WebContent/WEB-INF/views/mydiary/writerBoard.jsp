@@ -18,21 +18,18 @@
 				<form action="WriterBoard" method="post" enctype="multipart/form-data">
 				<table id="list">
 					<tr>
+						<td > </td>   <%//날짜 자동입력? 달력 나타나면 좋고 / 아님 수동 입력 %>
+						
+						<td>날씨</td>  <%//날씨 --> 이모지(해,구름,비) %>
+						
 						<td>제목</td>
 						<td><input type="text" name="title"> </td>
-					</tr>
-					<tr>
-						<td>작성자</td>
-						<td><input  type="text" name="writer"> </td>
 					</tr>
 					<tr>
 						<td colspan="2">내용</td>
 					</tr>
 					<tr>
-						<td colspan="2">
-							<input name="fileName" type="file" style="float: right;">
-							<textarea name="content" rows="10" style="resize: none;"></textarea>			
-						</td>
+						<td>기분 날씨</td>  <%// 표정 이모지 사용 - 즐거움, 화남, 슬픔 등 %>
 					</tr>
 					<tr>
 						<td colspan="2">
