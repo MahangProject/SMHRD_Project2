@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ page import="java.util.Date, java.io.FileWriter"%>   
+ <% Date now = new Date();%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,6 +18,10 @@
 <body>
 
 			<div id = "board">
+				<form>
+  					<input type='date' id='currentDate'/>
+				</form>
+				
 				<form action="WriterBoard" method="post" enctype="multipart/form-data">
 				<table id="list">
 					<tr>
@@ -22,7 +29,7 @@
 						
 						<td>날씨</td>  <%//날씨 --> 이모지(해,구름,비) %>
 						
-						<td>제목</td>
+						<td>제목</td> 
 						<td><input type="text" name="title"> </td>
 					</tr>
 					<tr>
@@ -41,6 +48,11 @@
 				</form>
 			</div>
 			<!-- Scripts -->
+			<script>
+  				document.getElementById('currentDate').value = new Date().toISOString().substring(0, 10);;
+			</script>
+			
+			
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
