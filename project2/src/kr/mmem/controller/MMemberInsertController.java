@@ -18,15 +18,15 @@ public class MMemberInsertController extends HttpServlet {
 			throws ServletException, IOException {
 		
 		request.setCharacterEncoding("euc-kr");
+		
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		int age = Integer.parseInt(request.getParameter("age"));
 		String gender = request.getParameter("gender");
-		int rses = Integer.parseInt(request.getParameter("rses"));
 		
-		MMemberVO vo = new MMemberVO(id, pw, name, email, age, gender, rses);
+		MMemberVO vo = new MMemberVO(id, pw, name, email, age, gender);
 		MMemberDAO dao = new MMemberDAO();
 		int cnt = dao.mmemberInsert(vo);
 		
@@ -34,10 +34,10 @@ public class MMemberInsertController extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		if (cnt>0) {
 			//성공
-			// out.print("회원가입 성공");
+			out.print("회원가입 성공");
 			// 리스트페이지로 다시 보내기(응답을 리스트페이지로 다시 보내기: /list)
 			//sendRedirect
-			response.sendRedirect("/project2/list");
+			response.sendRedirect("/project2/main.html");
 			
 		}else {
 			//실패

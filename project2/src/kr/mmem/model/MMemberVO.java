@@ -14,6 +14,19 @@ public class MMemberVO {
 	
 	
 	
+	public MMemberVO(String id, String pw, String name, String email, int age, String gender) {
+		super();
+		this.num = num;
+		this.id = id;
+		this.pw = pw;
+		this.name = name;
+		this.email = email;
+		this.age = age;
+		this.gender = gender;
+	}
+
+
+
 	public MMemberVO(String id, String pw, String name, String email, int age, String gender, int rses) {
 		super();
 		this.id = id;
