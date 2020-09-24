@@ -9,7 +9,23 @@ public class MMemberVO {
 	private int age;
 	private String gender;
 	private int rses;
+	
 	public MMemberVO(){ 	}
+	
+	
+	
+	public MMemberVO(String id, String pw, String name, String email, int age, String gender, int rses) {
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.name = name;
+		this.email = email;
+		this.age = age;
+		this.gender = gender;
+		this.rses = rses;
+	}
+
+
 	
 	
 	public MMemberVO(int num, String id, String pw, String name, String email, int age, String gender, int rses) {

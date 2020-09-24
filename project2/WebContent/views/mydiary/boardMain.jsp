@@ -1,4 +1,4 @@
-<%@page import="com.BoardDTO"%>
+<%@page import="com.BoardDTO"%>  
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -13,6 +13,7 @@
 <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 <link rel="stylesheet" href="assets/css/main.css" />
 <link rel="stylesheet" href="assets/css/board.css" />
+
 <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
@@ -45,12 +46,13 @@
 			</c:forEach>
 
 		</table>
-		<a href="hanbom.html"><button id="writer">홈으로가기</button></a> <a
+		<a href="main.html"><button id="writer">홈으로가기</button></a> <a
 			href="writerBoard.jsp"><button id="writer">작성하러가기</button></a>
 	</div>
 
 
 	<!-- Scripts -->
+	
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
