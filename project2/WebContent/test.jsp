@@ -4,7 +4,7 @@
 <html>
 <head>
 <title>자아존중감 테스트</title>
-<meta charset="utf-8" />
+<meta charset="EUC-KR" />
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 </head>
 <body>
