@@ -1,0 +1,8 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+nike747459.wixsite.com	TRUE	/mydiary	FALSE	1999999999	svSession	e6e0ec659c6e9a3283e445ec724b0c5062bbef22c0e7ea134d0affc6b878113231ca85ef9f1fb79883d3b3a2926544431e60994d53964e647acf431e4f798bcdddc2621936285cf9cdc88b638b1e528d2bbaf596e1ce57f86f84676aa3faa6f0
+nike747459.wixsite.com	TRUE	/	FALSE	1999999999	XSRF-TOKEN	1600915320|uOtia3T6XcQ3
+nike747459.wixsite.com	TRUE	/	FALSE	1999999999	SameSite	None
+nike747459.wixsite.com	TRUE	/	FALSE	1999999999	ssr-caching	cache#desc=hit#varnish=hit#dc#desc=ae1"
+nike747459.wixsite.com	TRUE	/	FALSE	1999999999	hs	1209232063
+
