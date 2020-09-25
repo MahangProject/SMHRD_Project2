@@ -1,13 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 
 <head>
-	<title>Generic Page - Massively by HTML5 UP</title>
+	
+	<title>plan</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css"/>
@@ -29,12 +28,12 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="links">
-				<li><a href="home.html">HOME</a></li>
-				<li><a href="mypage.html">MY PAGE</a></li>
-				<li class="active"><a href="plan.html">행동 PLAN</a></li>
-				<li><a href="board.html">항아리 BOARD</a></li>
-				<li><a href="page.html">도서 PAGE</a></li>
-			</ul>
+							<li><a href="home.html">HOME</a></li>
+							<li><a href="mypage.jsp">MY PAGE</a></li>
+							<li class="active"><a href="plan.jsp">행동 PLAN</a></li>
+							<li><a href="board.jsp">항아리 BOARD</a></li>
+							<li><a href="page.jsp">도서 PAGE</a></li>
+						</ul>
 		</nav>
 
 		<!-- Main -->
@@ -49,21 +48,16 @@
 
 				<body>
 
-<!-- 달성 버튼. -->
-
 					<div id="myDIV" class="header">
 
-						<h2 style="margin:5px">My To Do List</h2>
-						<form action ="/project2/myplanmake">
-						<input type="text" id="myInput" name="plan1" placeholder="Title..."> <!--검정색으ㅗㄹ 변경  -->
-						<span onclick="newElement()" class="addBtn" ><input type = "submit" class="addBtn" value = 'ADD'></span>
-						
-						</form>
+						<h2 style="margin:5px">To Do List</h2>
+						<input type="text" id="myInput" placeholder="Title..."> 
+
+						<span onclick="newElement()" class="addBtn">Add</span>
 					</div>
 
 					<ul id="myUL">						
-						<li class ="checked">my book</li> <!-- 누르면 checked 적용 되게끔.  --> 
-						<!-- 성공한 내역 저장. -->
+						<li class ="checked">my book</li> 
 					</ul>
 
 					<script>
@@ -106,7 +100,7 @@
 					/* 	$(list).click(function(){
 							if($(this).is(":checked")){
 						  	$(this).parent().addClass("checked");
-						    // 또는 css()를 바로 적용할 수도 있다.
+						    // ëë css()ë¥¼ ë°ë¡ ì ì©í  ìë ìë¤.
 						    //$(this).parent().css("background","#ffff00"); 
 						  }else{
 						  	$(this).parent().removeClass("checked");
@@ -130,7 +124,7 @@
 							var inputValue = document.getElementById("myInput").value;
 							var t = document.createTextNode(inputValue);
 							li.appendChild(t);
-							if (inputValue === '') {//add button 클릭시 새로 생성.
+							if (inputValue === '') {//add button í´ë¦­ì ìë¡ ìì±.
 								alert("You must write something!"); 
 							} else {
 								document.getElementById("myUL").appendChild(li);

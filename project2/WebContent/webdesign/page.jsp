@@ -1,13 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>MA_HANG</title>
-		<meta charset="utf-8" />
+		<meta charset="euc-kr" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -25,11 +24,11 @@
 			<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="home.html">HOME</a></li>
-							<li><a href="mypage.html">MY PAGE</a></li>
-							<li><a href="plan.html">행동 PLAN</a></li>
-							<li><a href="board.html">항아리 BOARD</a></li>
-							<li class="active"><a href="page.html">도서 PAGE</a></li>
+							<li class="active"><a href="home.html">HOME</a></li>
+							<li><a href="mypage.jsp">MY PAGE</a></li>
+							<li><a href="plan.jsp">행동 PLAN</a></li>
+							<li><a href="board.jsp">항아리 BOARD</a></li>
+							<li class="active"><a href="page.jsp">도서 PAGE</a></li>
 						</ul>
 					</nav>
 
@@ -55,7 +54,7 @@
 								<a href="/project2/booklist" class="button primary fit">자기계발</a>
 								</ul>
 								<ul class="actions">
-									<a href="page.html" class="button primary fit">심신안정</a>
+									<a href="page.jsp" class="button primary fit">심신안정</a>
 								</ul>
 							</form>
 						</section>

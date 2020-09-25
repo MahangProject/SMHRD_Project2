@@ -1,9 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>MY PAGE</title>
@@ -23,13 +21,13 @@
 					</header>
 
 				<!-- Nav -->
-				<nav id="nav">
+					<nav id="nav">
 						<ul class="links">
-							<li><a href="home.html">HOME</a></li>
-							<li class="active"><a href="mypage.html">MY PAGE</a></li>
-							<li><a href="plan.html">행동 PLAN</a></li>
-							<li><a href="board.html">항아리 BOARD</a></li>
-							<li><a href="page.html">도서 PAGE</a></li>
+							<li ><a href="home.html">HOME</a></li>
+							<li class="active"><a href="mypage.jsp">MY PAGE</a></li>
+							<li><a href="plan.jsp">행동 PLAN</a></li>
+							<li><a href="board.jsp">항아리 BOARD</a></li>
+							<li><a href="page.jsp">도서 PAGE</a></li>
 						</ul>
 					</nav>
 
@@ -45,7 +43,7 @@
 										<html lang="en">
 										<head>
 											<meta charset="EUC-KR">
-											<title>회원 가입</title>
+											<title>회원가입</title>
 										</head>
 										<body>
 											<form name="write_form_member" method="post">
@@ -58,17 +56,43 @@
 															<p style="color:gray;">NAME</p>
 														</th>
 														<td>
-															<input type="text" name="cursor:pointer">
+															<input type="text" name="name">
 															<a href='#' style='cursor:help'> </a>
 														</td>
 													</tr>
 										
 													<tr>
 														<th>
+															<p style="color:gray;">AGE</p>
+														</th>
+														<td>
+															<input type="text" name="age">
+															<a href='#' style='cursor:help'> </a>
+														</td>
+													</tr>
+
+													<tr>
+														<th>
+															<p style="color:gray;">GENDER</p>
+														</th>
+														<td class="s">
+															<div class="col-4 col-12-small">
+												<input type="radio" id="male" name="gender" value ='m' checked>
+												<label for="male">남</label>
+												<input type="radio" id="female" name="gender" value='f'>
+												<label for="female">여</label>
+															</div>
+											
+												
+														</td>
+													</tr>
+
+													<tr>
+														<th>
 															<p style="color:gray;">ID</p>
 														</th>
 														<td>
-															<input type="text" name="cursor:pointer">
+															<input type="text" name="id">
 															<a href='#' style='cursor:help'> </a>
 														</td>
 													</tr>
@@ -76,13 +100,13 @@
 														<th>
 															<p style="color:gray;">PASSWORD</p>
 														</th>
-														<td><input type="password" name="mbpw"> </td>
+														<td><input type="password" name="pw"> </td>
 													</tr>
 													<tr>
 														<th>
 															<p style="color:gray;">PW확인</p>
 														</th>
-														<td><input type="password" name="mbpw_re"></td>
+														<td><input type="password" name="pw_re"></td>
 													</tr>
 													<tr>
 														<th>
@@ -114,7 +138,7 @@
 													</tr>
 													<tr>
 														<th>
-															<p style="color:gray;">알람설정</p>
+															<p style="color:gray;">알람설정</p>
 														</th>
 														<td>
 															<input type="text" name="timeset">
@@ -162,7 +186,7 @@
 												<label for="demo-human3">친구관계</label>
 												</div><div class="col-6 col-12-small">
 												<input type="checkbox" id="demo-human4" name="demo-human4">
-												<label for="demo-human4">이성교제</label>
+												<label for="demo-human4">이성교제</label>
 												</div>
 												<div class="col-6 col-12-small">
 												<input type="checkbox" id="demo-human5" name="demo-human5">
@@ -170,7 +194,7 @@
 												</div>
 												<div class="col-6 col-12-small">
 												<input type="checkbox" id="demo-human6" name="demo-human6">
-												<label for="demo-human6">연예인,아이돌 덕질하기</label>
+												<label for="demo-human6">연예인&아이돌 덕질하기</label>
 												</div>
 												<div class="col-6 col-12-small">
 												<input type="checkbox" id="demo-human7" name="demo-human7">
@@ -180,7 +204,7 @@
 												<label for="demo-human8">악기</label>
 												</div>
 											<div class="col-12">
-												<textarea name="demo-message" id="demo-message" placeholder="기타" rows="6"></textarea>
+												<textarea name="demo-message" id="demo-message" placeholder="기타" rows="6"></textarea>
 											</div>
 														</td>
 													</tr>

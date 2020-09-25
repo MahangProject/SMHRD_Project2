@@ -1,13 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>MA_HANG</title>
-		<meta charset="utf-8" />
+		<meta charset="euc-kr" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -21,16 +19,16 @@
 					<header id="header">
 						<a href="home.html" class="logo">MA_HANG</a>
 					</header>
-
+				<p>확인</p>
 					
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="home.html">HOME</a></li>
-							<li><a href="mypage.html">MY PAGE</a></li>
-							<li><a href="plan.html">행동 PLAN</a></li>
-							<li class="active"><a href="board.html">항아리 BOARD</a></li>
-							<li><a href="page.html">도서 PAGE</a></li>
+							<li class="active"><a href="home.html">HOME</a></li>
+							<li><a href="mypage.jsp">MY PAGE</a></li>
+							<li><a href="plan.jsp">행동 PLAN</a></li>
+							<li class="active"><a href="board.jsp">항아리 BOARD</a></li>
+							<li><a href="page.jsp">도서 PAGE</a></li>
 						</ul>
 					</nav>
 
@@ -56,7 +54,7 @@
 											<tbody>
 												<tr>
 													<td>1</td>
-													<td>오늘의 기분</td>
+													<td>hello</td>
 													<td>2020.10.01</td>
 												</tr>
 											</tbody>
@@ -77,7 +75,7 @@
 						<section>
 
 							<ul class="actions">
-										<a href="board_write.html" class="button fit">WRITE</a>
+										<a href="board.jsp" class="button fit">WRITE</a>
 									</ul>
 						</section>
 					</footer>
