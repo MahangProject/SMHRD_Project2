@@ -65,6 +65,8 @@ public class MMemberDAO {
 			ps = conn.prepareStatement(SQL);
 			rs = ps.executeQuery();
 			while (rs.next()) {
+
+
 				String id = rs.getString("id");
 				String pw = rs.getString("pw");
 				String name = rs.getString("name");
@@ -72,7 +74,9 @@ public class MMemberDAO {
 				int age = rs.getInt("age");
 				String gender = rs.getString("gender");
 				int rses = rs.getInt("rses");
+
 				MMemberVO vo = new MMemberVO(id, pw, name, email, age, gender, rses);
+
 				list.add(vo);
 			}
 		} catch (Exception e) {
@@ -123,6 +127,8 @@ public class MMemberDAO {
 			ps.setInt(1, num);
 			rs = ps.executeQuery();
 			if (rs.next()) {
+
+
 				String id = rs.getString("id");
 				String pw = rs.getString("pw");
 				String name = rs.getString("name");

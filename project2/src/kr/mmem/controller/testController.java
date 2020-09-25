@@ -50,6 +50,7 @@ public class testController extends HttpServlet {
 			
 			
 			MMemberDAO dao = new MMemberDAO();
+//github.com/MahangProject/SMHRD_Project2.git
 			
 			//dao.testScoreUpdate(score); >> test Score
 			
