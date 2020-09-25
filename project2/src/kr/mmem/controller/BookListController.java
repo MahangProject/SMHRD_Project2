@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.mmem.model.BookDAO;
 import kr.mmem.model.BookVO;
+import kr.mmem.model.MMemberDAO;
+import kr.mmem.model.MMemberVO;
 
 
 @WebServlet("/booklist")
@@ -19,14 +21,17 @@ public class BookListController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 전체리스트를 출력
 				BookDAO dao = new BookDAO();
+				MMemberDAO dao2 = new MMemberDAO();
 				ArrayList<BookVO> list = dao.bookAllList();
 				//String id = request.getParameter("ID");
 				double[] list2 = dao.scoreAllList("whizzerscowl");
+				ArrayList<MMemberVO> list3 = dao2.memberAllList();
 				// JSP(View)
 
 				request.setAttribute("list", list); // 객체바인딩
 				request.setAttribute("list2", list2);
-				RequestDispatcher rd = request.getRequestDispatcher("/mahang3/nike747459.wixsite.com/mydiary/page2.jsp");
+				request.setAttribute("list3", list3);
+				RequestDispatcher rd = request.getRequestDispatcher("/views/book/bookpage.jsp");
 				rd.forward(request, response);
 		
 	}
