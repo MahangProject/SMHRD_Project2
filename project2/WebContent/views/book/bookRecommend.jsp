@@ -8,15 +8,13 @@
 <title>Insert title here</title>
 </head> 
 <body>
-<% 
+<%  //플라스크에서 받아온 값을 UTF-8로 인코딩
 	String book1 = new String(request.getParameter("book1").getBytes("ISO-8859-1"), "UTF-8");
 	String book2 = new String(request.getParameter("book2").getBytes("ISO-8859-1"), "UTF-8");
 	String book3 = new String(request.getParameter("book3").getBytes("ISO-8859-1"), "UTF-8");
-	String result = book1+", "+book2+", "+book3;
 %>
-<h1>당신이 선택한 책을 기반으로 <%= result %>들을 추천합니다.</h1>
 <table border="1" align="center">
-<tr align="center"><%if (book1.equals("멀쩡한 어른 되긴 글렀군")){%>
+<tr align="center"><%if (book1.equals("멀쩡한 어른 되긴 글렀군")){//임시로 보여주기용%>
 	<td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=250044628">
 	<img src="./views/img/book1.jpg" width="300px" height="400px"/></a></td>
 	<td><a href="http://www.yes24.com/Product/Goods/90895702">
