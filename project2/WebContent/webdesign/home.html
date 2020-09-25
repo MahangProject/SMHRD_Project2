@@ -4,9 +4,15 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
+
+
 <html>
 	<head>
 		<title>MAHANG</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript"></script>
+
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -21,10 +27,11 @@
 					<div id="intro">
 						<h1>MA_HANG<br />
 						</h1>
-						<p>"당신의 오늘 하루는 어땠나요?"</a><br />
-						<a href="https://html5up.net/license"></a></p>
+						<p>"당신의 오늘 하루는 어땠나요?"<br/></p>
+						
 						<ul class="actions">
-									<li><input type="submit" value="자존감 TEST" /></li>
+							
+							<li><form action ="/project2/test.html"><button type="submit" >자존감 TEST</button></form></li>
 								</ul>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
@@ -33,7 +40,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">MA_HANG</a>
+						<a href="home.html" class="logo">MA_HANG</a>
 					</header>
 
 				<!-- Nav -->
@@ -56,7 +63,7 @@
 									<h2><a href="#">OUR MENU<br />
 								</header>
 								<ul class="actions special">
-									<li><a href="#" class="button large">MY PAGE</a></li>
+									<li><a href="mypage.html" class="button large">MY PAGE</a></li>
 								</ul>
 							</article>
 
@@ -64,17 +71,17 @@
 							<section class="posts">
 								<article>
 									<ul class="actions special">
-										<li><a href="#" class="button">행동 PLAN</a></li>
+										<li><a href="plan.html" class="button">행동 PLAN</a></li>
 									</ul>
 								</article>
 								<article>
 									<ul class="actions special">
-										<li><a href="#" class="button">항아리 BOARD</a></li>
+										<li><a href="board.html" class="button">항아리 BOARD</a></li>
 									</ul>
 								</article>
 								<article>
 									<ul class="actions special">
-										<li><a href="#" class="button">도서 PAGE</a></li>
+										<li><a href="page.html" class="button">도서 PAGE</a></li>
 									</ul>
 								
 							</section>
@@ -85,13 +92,13 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="post" action="#">
+							<form method="post" action="/project2/webdesign/plan.html">
 								<div class="fields">
 									<div class="field">
 										<label for="name">ID</label>
 										<input type="text" name="name" id="name" />
 									</div>
-									<div class="field">
+									<div class="field"> 
 										<label for="email">Email</label>
 										<input type="text" name="email" id="email" />
 									</div>
@@ -100,7 +107,11 @@
 								</div>
 								<ul class="actions">
 									<li><input type="submit" value="SIGN IN" /></li>
-									<li><input type="submit" value="SIGN UP" /></li>
+									<li><input type="button" value = "signup" onClick="location.href='/project2/webdesign/mypage.html'"></li>
+
+									
+							
+								
 								</ul>
 							</form>
 						</section>

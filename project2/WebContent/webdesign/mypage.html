@@ -103,8 +103,13 @@
 															<p style="color:gray;">알람수신</p>
 														</th>
 														<td class="s">
-															<label><input type="radio" name="chk_al" value="YES"checked> YES</label>
-															<label><input type="radio" name="chk_al" value="NO"> NO</label>
+															<div class="col-4 col-12-small">
+												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+												<label for="demo-priority-low">YES</label>
+											</div>
+											<div class="col-4 col-12-small">
+												<input type="radio" id="demo-priority-normal" name="demo-priority">
+												<label for="demo-priority-normal">NO</label>
 														</td>
 													</tr>
 													<tr>
@@ -118,8 +123,7 @@
 													<tr>
 														<th>
 															<p style="color:gray;">MY RSES</p>
-															<ul class="actions small">
-															<li><a href="#" class="button small">보기</a></li>
+															<a href="#" class="button primary icon solid fa-search">SEE</a>
 															</ul>	
 															<tr>
 														<th>
@@ -144,19 +148,40 @@
 															
 														</th>
 														<td>
-															    <form method="get" action="mypage.html">
-
-															<label><input type="checkbox" name="interest" value="2" > 외모관리</label>
-															<label><input type="checkbox" name="interest" value="3"> 운동&다이어트</label>
-															<label><input type="checkbox" name="interest" value="4"> SNS</label>
-															<label><input type="checkbox" name="interest" value="5"> 친구관계</label>
-															<label><input type="checkbox" name="interest" value="6"> 이성교제</label>
-															<label><input type="checkbox" name="interest" value="7"> 여행</label>
-															<label><input type="checkbox" name="interest" value="8"> 연예인,아이돌 덕질하기</label>
-															<label><input type="checkbox" name="interest" value="9"> 아르바이트</label>
-															<label><input type="checkbox" name="interest" value="10"> 악기</label>
-															<label><input type="checkbox" name="interest" value="11">기타</label>
-															    </form>
+														
+												<div class="col-6 col-12-small">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">외모관리</label>
+												</div>
+												<div class="col-6 col-12-small">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">운동&다이어트</label>
+												</div>
+												<div class="col-6 col-12-small">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">친구관계</label>
+												</div><div class="col-6 col-12-small">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">이성교제</label>
+												</div>
+												<div class="col-6 col-12-small">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">여행</label>
+												</div>
+												<div class="col-6 col-12-small">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">연예인,아이돌 덕질하기</label>
+												</div>
+												<div class="col-6 col-12-small">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">아르바이트</label>
+												</div><div class="col-6 col-12-small">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">악기</label>
+												</div>
+											<div class="col-12">
+												<textarea name="demo-message" id="demo-message" placeholder="기타" rows="6"></textarea>
+											</div>
 														</td>
 													</tr>
 										
@@ -179,9 +204,10 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="post" action="#">
 								<ul class="actions">
-									<li><input type="submit" value="SIGN UP" /></li>
+									
+									<li><input type="button" value = "signup" onClick="location.href='/project2/webdesign/home.html'"></li>
+
 								</ul>
 							</form>
 						</section>
