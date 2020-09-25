@@ -10,7 +10,7 @@
 	<title>Generic Page - Massively by HTML5 UP</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/main.css"/>
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
@@ -175,20 +175,18 @@
 
 					<div id="myDIV" class="header">
 						<h2 style="margin:5px">My To Do List</h2>
-						<input type="text" id="myInput" placeholder="Title...">
+						<input type="text" id="myInput" placeholder="Title..." color = "black">
 						<span onclick="newElement()" class="addBtn">Add</span>
 					</div>
 
-					<ul id="myUL">
-						<li>Hit the gym</li>
+					<ul id="myUL">						
 						<li class="checked">Pay bills</li>
 						<li>Meet George</li>
-						<li>Buy eggs</li>
-						<li>Read a book</li>
-						<li>Organize office</li>
 					</ul>
 
 					<script>
+					
+					
 						// Create a "close" button and append it to each list item
 						var myNodelist = document.getElementsByTagName("LI");
 						var i;
@@ -210,14 +208,39 @@
 							}
 						}
 
+					
+						
 						// Add a "checked" symbol when clicking on a list item
-						var list = document.querySelector('ul');
+						var list = document.querySelector('li');
 						list.addEventListener('click', function (ev) {
 							if (ev.target.tagName === 'LI') {
 								ev.target.classList.toggle('checked');
+								
 							}
 						}, false);
 
+						
+						$(list).click(function(){
+							if($(this).is(":checked")){
+						  	$(this).parent().addClass("checked");
+						    // 또는 css()를 바로 적용할 수도 있다.
+						    //$(this).parent().css("background","#ffff00"); 
+						  }else{
+						  	$(this).parent().removeClass("checked");
+						  }
+						});
+
+						$(".chk_for").click(function(){
+							_id = $(this).attr("id");
+							if($(this).is(":checked")){
+						  	$("label[for='"+_id+"']").addClass("checked");
+						  }else{
+						  	$("label[for='"+_id+"']").removeClass("checked");
+						  }
+						})	
+						
+						
+						
 						// Create a new list item when clicking on the "Add" button
 						function newElement() {
 							var li = document.createElement("li");
