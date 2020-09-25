@@ -25,7 +25,7 @@ public class myPlanListController extends HttpServlet {
 		//객체 바인딩 합시당
 		
 		request.setAttribute("list", list);
-		RequestDispatcher rd = request.getRequestDispatcher("myplan.jsp"); // 요청을 의뢰할 페이지를 얻어오기
+		RequestDispatcher rd = request.getRequestDispatcher("plan.html"); // 요청을 의뢰할 페이지를 얻어오기
 		rd.forward(request, response);
 	
 	

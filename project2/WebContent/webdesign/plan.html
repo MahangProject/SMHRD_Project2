@@ -49,12 +49,16 @@
 
 				<body>
 
+<!-- 달성 버튼. -->
+
 					<div id="myDIV" class="header">
 
 						<h2 style="margin:5px">My To Do List</h2>
-						<input type="text" id="myInput" placeholder="Title..."> <!--검정색으ㅗㄹ 변경  -->
-
-						<span onclick="newElement()" class="addBtn">Add</span>
+						<form action ="/project2/myplanmake">
+						<input type="text" id="myInput" name="plan1" placeholder="Title..."> <!--검정색으ㅗㄹ 변경  -->
+						<span onclick="newElement()" class="addBtn" ><input type = "submit" class="addBtn" value = 'ADD'></span>
+						
+						</form>
 					</div>
 
 					<ul id="myUL">						
