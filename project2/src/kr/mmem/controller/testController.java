@@ -50,7 +50,6 @@ public class testController extends HttpServlet {
 			
 			
 			MMemberDAO dao = new MMemberDAO();
-			MMemberVO vo = new MMemberVO();
 			
 			//dao.testScoreUpdate(score); >> test Score
 			
