@@ -1,9 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>MA_HANG</title>
@@ -26,18 +25,18 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="home.html">HOME</a></li>
-							<li><a href="mypage.html">MY PAGE</a></li>
-							<li><a href="plan.html">행동 PLAN</a></li>
-							<li class="active"><a href="board.html">항아리 BOARD</a></li>
-							<li><a href="page.html">도서 PAGE</a></li>
+							<li class="active"><a href="home.html">HOME</a></li>
+							<li><a href="mypage.jsp">MY PAGE</a></li>
+							<li><a href="plan.jsp">행동 PLAN</a></li>
+							<li class="active"><a href="board.jsp">항아리 BOARD</a></li>
+							<li><a href="page.jsp">도서 PAGE</a></li>
 						</ul>
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Post -->
+						<!-- Post --> 
 							<section class="post">
 								<header class="major">
 									<h1>항아리<br />
@@ -55,7 +54,15 @@
 					<tr>
 						 
 						
-						<td>날씨</td>  
+						<div class="col-12">
+												<select name="demo-category" id="demo-category">
+													<option value="">- Choose Today's WEATHER -</option>
+													<option value="1"><span style='font-size:100px;'>&#9748;</span></option>
+													<option value="1"><span style='font-size:100px;'>&#127774;</span></option>
+													<option value="1"><span style='font-size:100px;'>&#10052;</span></option>
+													<option value="1"><span style='font-size:100px;'>&#127781;</span></option>
+												</select>
+											</div>
 						
 						<td>TITLE</td> 
 						<td><input type="text" name="title"> </td>
@@ -66,8 +73,15 @@
 						
 					</tr>
 					<tr>
-						<label><td>FEEL</td> </label>
-
+						<div class="col-12">
+												<select name="demo-category" id="demo-category">
+													<option value="">- Choose Today's MOOD-</option>
+													<option value="1"><span style='font-size:100px;'>&#128522;</span></option>
+													<option value="1"><span style='font-size:100px;'>&#128532;</span></option>
+													<option value="1"><span style='font-size:100px;'>&#128544;</span></option>
+													<option value="1"><span style='font-size:100px;'>&#128549;</span></option>
+												</select>
+											</div>
 					</tr>
 				
 				</table>
@@ -95,9 +109,8 @@
 						<section>
 
 							<ul class="actions">
-									<li><a href="board_write.html" class="button">UPDATE</a></li>
-										
-								</ul>
+										<a href="board_write.jsp" class="button fit">UPDATE</a>
+									</ul>
 						</section>
 					</footer>
 
