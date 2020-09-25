@@ -19,8 +19,8 @@ public class myPlanManageController extends HttpServlet {
 		int cnt =0;
 		
 		String plan1 = request.getParameter("plan1");
-		int success1 = Integer.parseInt(request.getParameter("success1"));
-		
+		//int success1 = Integer.parseInt(request.getParameter("success1"));
+		int success1 = 5;
 		PrintWriter out = response.getWriter();
 		
 		out.print(plan1);//È®ÀÎ
@@ -37,7 +37,7 @@ public class myPlanManageController extends HttpServlet {
 		if(cnt>0) {
 			
 			out.print("success");
-			response.sendRedirect("myplan.jsp");
+			response.sendRedirect("/project2/webdesign/plan.html");
 		}else {
 			out.print("fail");
 		}
