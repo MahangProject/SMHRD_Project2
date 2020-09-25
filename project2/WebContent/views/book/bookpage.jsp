@@ -25,7 +25,6 @@
 			<td>분야</td>
 			<td>책 소개</td>
 			<td>사용자 평점</td>
-			<td>해당 책 기준</td>
 		</tr>
 		<%
 		for(int i = 0; i < 165; i++) { %>
@@ -34,7 +33,6 @@
 			<td><%=list.get(i).getB_category() %></td>
 			<td><a href=<%=list.get(i).getB_url()%>>책 소개 페이지로</a></td>
 			<td><%=list2[i]%></td>
-			<td><input type="submit" value="도서 추천"></td>
 		</tr>
 		<% } %>
 </table>

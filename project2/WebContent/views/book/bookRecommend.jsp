@@ -8,10 +8,6 @@
 <title>Insert title here</title>
 </head> 
 <body>
-<!-- 
-	Flask 서버에서 전송한 결과값을 꺼내서 사용자에게 보여준다.(0 or 1값이 수신된다.)
-	이미지를 바꿔도되고, 글자를 바꿔도되고 결과물에 대한 디자인은 여러분 맘대로~!!
- -->
 <% 
 	String book1 = new String(request.getParameter("book1").getBytes("ISO-8859-1"), "UTF-8");
 	String book2 = new String(request.getParameter("book2").getBytes("ISO-8859-1"), "UTF-8");
@@ -20,19 +16,19 @@
 %>
 <h1>당신이 선택한 책을 기반으로 <%= result %>들을 추천합니다.</h1>
 <table border="1" align="center">
-<tr align="center"><%if (book1.equals("초격차 : 리더의 질문")){%>
-	<td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=250399431">
+<tr align="center"><%if (book1.equals("멀쩡한 어른 되긴 글렀군")){%>
+	<td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=250044628">
 	<img src="./views/img/book1.jpg" width="300px" height="400px"/></a></td>
-	<td><a href="http://www.yes24.com/Product/Goods/90266627">
+	<td><a href="http://www.yes24.com/Product/Goods/90895702">
 	<img src="./views/img/book2.jpg" width="300px" height="400px"/></a></td>
-	<td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=251645804">
+	<td><a href=http://www.yes24.com/Product/Goods/91401551>
 	<img src="./views/img/book3.jpg" width="300px" height="400px"/></a></td>
 	<%}else { %>
+	<td><a href="http://www.yes24.com/Product/Goods/91401551">
+	<img src="./views/img/book3.jpg" width="300px" height="400px"/></a></td>
 	<td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=249224932">
 	<img src="./views/img/book4.jpg" width="300px" height="400px"/></a></td>
-	<td><a href="http://www.yes24.com/Product/Goods/89860367">
-	<img src="./views/img/book5.jpg" width="300px" height="400px"/></a></td>
-	<td><a href="http://www.yes24.com/Product/Goods/90442617">
+	<td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=228727924">
 	<img src="./views/img/book6.jpg" width="300px" height="400px"/></a></td>
 	<%} %>
 </tr>

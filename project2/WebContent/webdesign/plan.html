@@ -50,14 +50,16 @@
 				<body>
 
 					<div id="myDIV" class="header">
-						<h2 style="margin:5px">To Do List</h2>
-						<input type="text" id="myInput" placeholder="Title..." color = "black">
+
+						<h2 style="margin:5px">My To Do List</h2>
+						<input type="text" id="myInput" placeholder="Title..."> <!--검정색으ㅗㄹ 변경  -->
+
 						<span onclick="newElement()" class="addBtn">Add</span>
 					</div>
 
 					<ul id="myUL">						
-						<li class="checked">Pay bills</li>
-						<li>Meet George</li>
+						<li class ="checked">my book</li> <!-- 누르면 checked 적용 되게끔.  --> 
+						<!-- 성공한 내역 저장. -->
 					</ul>
 
 					<script>
@@ -90,13 +92,14 @@
 						var list = document.querySelector('li');
 						list.addEventListener('click', function (ev) {
 							if (ev.target.tagName === 'LI') {
-								ev.target.classList.toggle('checked');
+								ev.target.classList.addClass("checked");
 								
 							}
 						}, false);
 
+						console.log(list);
 						
-						$(list).click(function(){
+					/* 	$(list).click(function(){
 							if($(this).is(":checked")){
 						  	$(this).parent().addClass("checked");
 						    // 또는 css()를 바로 적용할 수도 있다.
@@ -113,7 +116,7 @@
 						  }else{
 						  	$("label[for='"+_id+"']").removeClass("checked");
 						  }
-						})	
+						})	 */
 						
 						
 						
@@ -123,12 +126,12 @@
 							var inputValue = document.getElementById("myInput").value;
 							var t = document.createTextNode(inputValue);
 							li.appendChild(t);
-							if (inputValue === '') {
-								alert("You must write something!");
+							if (inputValue === '') {//add button 클릭시 새로 생성.
+								alert("You must write something!"); 
 							} else {
 								document.getElementById("myUL").appendChild(li);
 							}
-							document.getElementById("myInput").value = "";
+							document.getElementById("myInput").value = ""; //reset
 
 							var span = document.createElement("SPAN");
 							var txt = document.createTextNode("\u00D7");
