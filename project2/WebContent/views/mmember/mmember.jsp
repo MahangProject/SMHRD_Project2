@@ -12,23 +12,40 @@
 </head>
 <body>
 	-회원가입-
-	<form action="${cpath}/insert.do" method="post">
+	<form action="../../insert" method="post"> <!-- testPage로 이동 -->
 		<table border="0">
+
+			<tr>	
+				<td>id</td>
+				<td><input type="text" name="id" /></td>
+			</tr>
+			<tr>
+				<td>password</td>
+				<td><input type="text" name="pw" /></td>
+			</tr>
 			<tr>
 				<td>이름</td>
 				<td><input type="text" name="name" /></td>
 			</tr>
+						
 			<tr>
+				<td>E-mail</td>
+				<td><input type="text" name="email" /></td> 		
+			</tr>
+
+			<tr>
+				<td>나이</td>
+				<td><input type="number" name="age" /></td>
+			</tr>
+
+			<tr>			
+				<td>성별</td>
+				<td><input type="text" name="gender"/></td>
+		
+			</tr>
 			
-				<td>전화번호</td>
-				<td><input type="text" name="phone" /></td>
-			</tr>
-			<tr>
-				<td>주소</td>
-				<td><input type="text" name="addr" size="50" /> <input
-					type="button" value="위도경도구하기"></td>
-					
-			</tr>
+			
+			
 			<tr>
 				<td colspan="2" align="center"><input type="submit" value="가입" />
 					<input type="reset" value="취소" />

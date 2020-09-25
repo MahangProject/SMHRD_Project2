@@ -35,7 +35,7 @@ public class MMemberDAO {
 	public int mmemberInsert(MMemberVO vo) {
 		conn = getConnect();
 		// MyBatis : SQL Mapping Framework for Java   
-		String SQL = "insert into mmember values(seq_num.nextval,?,?,?,?,?,?,?)";
+		String SQL = "insert into mmember values(?,?,?,?,?,?,0)"; //0으로 넣고. 나중에 테스트에서 추가하는걸로.
 		int cnt = -1; // -1(실패)
 		try {
 			ps = conn.prepareStatement(SQL);
@@ -45,7 +45,6 @@ public class MMemberDAO {
 			ps.setString(4, vo.getEmail());
 			ps.setInt(5, vo.getAge());
 			ps.setString(6, vo.getGender());
-			ps.setInt(7, vo.getRses());
 			cnt = ps.executeUpdate();
 
 		} catch (Exception e) {
@@ -151,6 +150,28 @@ public class MMemberDAO {
 			ps = conn.prepareStatement(SQL);
 			ps.setString(1, vo.getPw());
 			ps.setString(2, vo.getEmail());
+			
+			cnt = ps.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			dbClose();
+		}
+		return cnt;
+
+		
+		
+	}
+	
+	//★★★★ 고쳐야함.
+	public int testScoreUpdate(int score, String id) {
+		conn = getConnect();
+		String SQL = "update mmember set RSES=? where id = ?"; //이거 고쳐야한다.
+		int cnt = -1;
+		try {
+			ps = conn.prepareStatement(SQL);
+			ps.setInt(1,score);
+			ps.setString(2,id);
 			
 			cnt = ps.executeUpdate();
 		} catch (Exception e) {
