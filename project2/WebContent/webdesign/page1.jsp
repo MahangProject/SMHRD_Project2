@@ -1,13 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>MA_HANG</title>
-		<meta charset="utf-8" />
+		<meta charset="euc-kr" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -22,15 +21,14 @@
 						<a href="home.html" class="logo">MA_HANG</a>
 					</header>
 
-					
-				<!-- Nav -->
+			<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="home.html">HOME</a></li>
-							<li><a href="mypage.html">MY PAGE</a></li>
-							<li><a href="plan.html">행동 PLAN</a></li>
-							<li class="active"><a href="board.html">항아리 BOARD</a></li>
-							<li><a href="page.html">도서 PAGE</a></li>
+							<li class="active"><a href="home.html">HOME</a></li>
+							<li><a href="mypage.jsp">MY PAGE</a></li>
+							<li><a href="plan.jsp">행동 PLAN</a></li>
+							<li><a href="board.jsp">항아리 BOARD</a></li>
+							<li class="active"><a href="page.jsp">도서 PAGE</a></li>
 						</ul>
 					</nav>
 
@@ -40,33 +38,8 @@
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
-									<h1>항아리<br />
-									BOARD</h1>
-
-									<h3>LIST</h3>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>NUM</th>
-													<th>Description</th>
-													<th>DATE</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>1</td>
-													<td>오늘의 기분</td>
-													<td>2020.10.01</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
+									<h1>MY<br />
+									PAGE</h1>
 								</header>
 							</section>
 
@@ -75,14 +48,21 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-
-							<ul class="actions">
-										<a href="board_write.html" class="button fit">WRITE</a>
-									</ul>
+							<form method="post" action="#">
+								
+								<ul class="actions">
+								<a href="/project2/booklist" class="button primary fit">자기계발</a>
+								</ul>
+								<ul class="actions">
+									<a href="page.html" class="button primary fit">심신안정</a>
+								</ul>
+							</form>
 						</section>
+						
+						
+					
 					</footer>
 
-					</div>
 
 			</div>
 

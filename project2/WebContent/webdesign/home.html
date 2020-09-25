@@ -1,12 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-
-
-
 <html>
 	<head>
 		<title>MAHANG</title>
@@ -47,10 +39,10 @@
 					<nav id="nav">
 						<ul class="links">
 							<li class="active"><a href="home.html">HOME</a></li>
-							<li><a href="mypage.html">MY PAGE</a></li>
-							<li><a href="plan.html">행동 PLAN</a></li>
-							<li><a href="board.html">항아리 BOARD</a></li>
-							<li><a href="page.html">도서 PAGE</a></li>
+							<li><a href="mypage.jsp">MY PAGE</a></li>
+							<li><a href="plan.jsp">행동 PLAN</a></li>
+							<li><a href="board.jsp">항아리 BOARD</a></li>
+							<li><a href="page.jsp">도서 PAGE</a></li>
 						</ul>
 					</nav>
 
@@ -63,7 +55,7 @@
 									<h2><a href="#">OUR MENU<br />
 								</header>
 								<ul class="actions special">
-									<li><a href="mypage.html" class="button">MY PAGE</a></li>
+									<li><a href="mypage.jsp" class="button">MY PAGE</a></li>
 								</ul>
 							</article>
 
@@ -71,17 +63,17 @@
 							<section class="posts">
 								<article>
 									<ul class="actions special">
-										<li><a href="plan.html" class="button">행동 PLAN</a></li>
+										<li><a href="plan.jsp" class="button">행동 PLAN</a></li>
 									</ul>
 								</article>
 								<article>
 									<ul class="actions special">
-										<li><a href="board.html" class="button">항아리 BOARD</a></li>
+										<li><a href="board.jsp" class="button">항아리 BOARD</a></li>
 									</ul>
 								</article>
 								<article>
 									<ul class="actions special">
-										<li><a href="page.html" class="button" >도서 PAGE</a></li>
+										<li><a href="page.jsp" class="button" >도서 PAGE</a></li>
 									</ul>
 								
 							</section>
@@ -92,15 +84,15 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="post" action="/project2/webdesign/plan.html">
+							<form method="get" action="/project2/mmemlogin">
 								<div class="fields">
 									<div class="field">
-										<label for="name">ID</label>
-										<input type="text" name="name" id="name" />
+										<label for="name">아이디</label>
+										<input type="text" name="id" id="id" />
 									</div>
 									<div class="field"> 
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
+										<label for="password">비밀번호</label>
+										<input type="text" name="pwd" id="pwd" />
 									</div>
 									<div class="field">
 									</div>
@@ -108,11 +100,8 @@
 								<ul class="actions">
 
 									<li><input type="submit" value="SIGN IN"/></li>
-									<li><input type="button" value="SIGN UP" onclick ="location.href='/project2/webdesign/mypage.html'"//></li>
+									<li><input type="button" value="SIGN UP" onclick ="location.href='/project2/webdesign/mypage.jsp'"//></li>
 
-
-
-																
 
 								</ul>
 							</form>

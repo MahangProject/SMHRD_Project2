@@ -37,7 +37,7 @@ public class MMemberLoginController extends HttpServlet {
 		
 		//id = admin / pwd = admin
 		
-		if(id.equals("1234")&&pwd.equals("1234")) {
+		if(id.equals("admin")&&pwd.equals("admin")) {
 			// 회원 인증에 성공 -> 서비스 되는 페이지로 이동을 시켜줘야 겠지 .무엇이든지 만들어 주면 됨(Servlet, JSP)
 			//main.jsp, banking.jsp
 			HttpSession session = request.getSession(); //session ID를 만드는 메소드 //sessionID공간할당.
@@ -46,14 +46,14 @@ public class MMemberLoginController extends HttpServlet {
 			System.out.println(session.getLastAccessedTime());
 			System.out.println(session.getCreationTime()); //세션이 만들어진 시간.
 			session.setAttribute("id", id); // 객체 바인딩(session) 
-			response.sendRedirect("home.html");
+			response.sendRedirect("/project2/webdesign/home.html");
 			
 		}else {
 			System.out.println("실패");
 			//page를 바꾸는 기술 >> 	1. forwarding 
 							  //2. response.sendredirect
 			
-			response.sendRedirect("home.html"); //실패했으니 다시 로그인으로 보내버림.
+			response.sendRedirect("/project2/webdesign/plan.html"); //실패했으니 다시 로그인으로 보내버림.
 		}	
 		
 		
