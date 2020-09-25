@@ -28,7 +28,7 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="links">
-							<li class="active"><a href="home.html">HOME</a></li>
+							<li><a href="home.html">HOME</a></li>
 							<li><a href="mypage.jsp">MY PAGE</a></li>
 							<li class="active"><a href="plan.jsp">행동 PLAN</a></li>
 							<li><a href="board.jsp">항아리 BOARD</a></li>
@@ -51,7 +51,7 @@
 					<div id="myDIV" class="header">
 
 						<h2 style="margin:5px">To Do List</h2>
-						<input type="text" id="myInput" placeholder="Title..."> <!--ê²ì ìì¼ë¡ë³ê²½  -->
+						<input type="text" id="myInput" placeholder="Title..."> 
 
 						<span onclick="newElement()" class="addBtn">Add</span>
 					</div>
