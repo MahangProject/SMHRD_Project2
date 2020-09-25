@@ -46,14 +46,14 @@ public class MMemberLoginController extends HttpServlet {
 			System.out.println(session.getLastAccessedTime());
 			System.out.println(session.getCreationTime()); //세션이 만들어진 시간.
 			session.setAttribute("id", id); // 객체 바인딩(session) 
-			response.sendRedirect("main.html");
+			response.sendRedirect("home.html");
 			
 		}else {
 			System.out.println("실패");
 			//page를 바꾸는 기술 >> 	1. forwarding 
 							  //2. response.sendredirect
 			
-			response.sendRedirect("login.html"); //실패했으니 다시 로그인으로 보내버림.
+			response.sendRedirect("home.html"); //실패했으니 다시 로그인으로 보내버림.
 		}	
 		
 		
