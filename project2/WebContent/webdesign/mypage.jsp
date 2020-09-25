@@ -1,10 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
+
+<c:if test = "${id == null}">
+	<c:redirect url = "home.html"/>
+</c:if>	
+
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>MY PAGE</title>
+		<title>${id }</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -17,7 +22,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="home.html" class="logo">MA_HANG</a>
+						<a href="home.html" class="logo">${id}</a>
 					</header>
 
 				<!-- Nav -->
