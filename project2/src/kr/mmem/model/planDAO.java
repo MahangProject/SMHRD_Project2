@@ -67,19 +67,17 @@ public class planDAO {
 						+ "'2100'," // alarm 근데 알람이 필요한가? 
 						+ "?," 		// do_list1
 						+ "?," 		// success1
-						+ "'somthing'," 	//book_name
-						+ "0," 		// 목표 page
-						+ "0," 		// success 도서대상 int
-						+ "50)";		//misson_score 누적할지 말지 결정.
+						+ "?)";		//misson_score 누적할지 말지 결정.
 				
 				System.out.println(dto.getDo_list1());
-	
+				System.out.println(dto.getSuccess1());
+				System.out.println("미션점수에오"+dto.getMission_score());
 				
 				psmt = conn.prepareStatement(sql);
 				
 				psmt.setString(1, dto.getDo_list1());
 				psmt.setInt(2, dto.getSuccess1());
-
+				psmt.setInt(3, (dto.getMission_score()+dto.getSuccess1()));
 				
 				cnt = psmt.executeUpdate();
 				
@@ -112,12 +110,9 @@ public class planDAO {
 				String alarm = rs.getString(3);
 				String do_list1 = rs.getString(4);
 				int success1 = rs.getInt(5);
-				String book_name = rs.getString(6);
-				int page = rs.getInt(7);
-				int success = rs.getInt(8);
-				int mission_score = rs.getInt(9);
+				int mission_score = rs.getInt(6);
 				
-				planVO dto = new planVO(id, do_date, alarm, do_list1, success1, book_name, page, success, mission_score);
+				planVO dto = new planVO(id, do_date, alarm, do_list1, success1, mission_score);
 				//반복문을 통해서 가져옴.
 				list.add(dto); //list에 memberVO생성자 형식으로 넣어주기 
 			}

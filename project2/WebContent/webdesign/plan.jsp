@@ -1,10 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%
-	String id = (String)session.getAttribute("id");
-%>  
-
 <!DOCTYPE HTML>
 <html>
 
@@ -207,11 +203,10 @@ input {
 							close[i].onclick = function () {
 								var div = this.parentElement;
 								console.log(div.innerHTML.replace('<span class="close">×</span>',''));
-								$ajax({
-									url: 'plan2.jsp',
+								$.ajax({
+									url: '/project2/myplanmake',
 									type: 'post',
 									data: {
-										id: <%=id%>,
 										do_list1: div.innerHTML.replace('<span class="close">×</span>',''),
 										success1: 1
 									},
@@ -288,8 +283,20 @@ input {
 						  for (i = 0; i < close.length; i++) {
 						    close[i].onclick = function() {
 						      var div = this.parentElement;
-								console.log(div.innerHTML.replace('<span class="close">×</span>',''));
-								
+						      $.ajax({
+									url: '/project2/myplanmake',
+									type: 'post',
+									data: {
+										do_list1: div.innerHTML.replace('<span class="close">×</span>',''),
+										success1: 1
+									},
+									success : function(t){ 
+			                             alert('성공!');
+			               } ,
+			               error : function(){
+			                         alert('실패 ㅠㅠ');
+			               }
+			               });
 						      div.style.display = "none";
 						    }
 						  }

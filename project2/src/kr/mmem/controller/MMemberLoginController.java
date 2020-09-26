@@ -37,7 +37,7 @@ public class MMemberLoginController extends HttpServlet {
 		
 		//id = admin / pwd = admin
 		
-		if(id.equals("admin")&&pwd.equals("admin")) {
+		if(id.equals("whizzerscowl")&&pwd.equals("1111")) {
 			// 회원 인증에 성공 -> 서비스 되는 페이지로 이동을 시켜줘야 겠지 .무엇이든지 만들어 주면 됨(Servlet, JSP)
 			//main.jsp, banking.jsp
 			HttpSession session = request.getSession(); //session ID를 만드는 메소드 //sessionID공간할당.
