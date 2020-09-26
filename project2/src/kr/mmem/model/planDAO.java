@@ -62,7 +62,7 @@ public class planDAO {
 
 			try {
 				String sql = "insert into plan values("
-						+ "'kelvintitan'," // id
+						+ "'whizzerscowl'," // id
 						+ "sysdate,"// do_date
 						+ "'2100'," // alarm 근데 알람이 필요한가? 
 						+ "?," 		// do_list1
