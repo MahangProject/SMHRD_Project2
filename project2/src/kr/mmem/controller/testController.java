@@ -11,6 +11,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
 import org.apache.catalina.startup.SetAllPropertiesRule;
 
@@ -53,23 +55,17 @@ public class testController extends HttpServlet {
 //github.com/MahangProject/SMHRD_Project2.git
 			
 			//dao.testScoreUpdate(score); >> test Score
-			
-			
-			int cnt = dao.testScoreUpdate(sum, "test1");
+			HttpSession session = request.getSession();
+			String id = (String)session.getAttribute("id");
+			int cnt = dao.testScoreUpdate(sum, id);
 			
 			if(cnt>0) {
 				System.out.println("입력 성공");
 				out.print("변경성공");
-				
-//				response.sendRedirect("main.html");
+				session.setAttribute("rses", sum);
+				response.sendRedirect("/project2/webdesign/home.html");
 			}else {
 				out.print("실패");
 			}
-
-
-			
-		
-		
 	}
-
 }
