@@ -1,3 +1,6 @@
+<%@page import="com.BoardDTO"%>  
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
@@ -9,14 +12,18 @@
 
 <html>
 	<head>
-		<title>${id }</title>
+		<title>${id}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-
+	<%
+	BoardDAO dao = new BoardDAO();
+	ArrayList<BoardDTO> list = dao.viewAll();
+	request.setAttribute("list", list);  // request는 계속 반복, pageContext는 현 페이지에서만 한번
+	%>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -29,7 +36,7 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="home.html">HOME</a></li>
+							<li><a href="home.html">HOME</a></li>
 							<li><a href="mypage.jsp">MY PAGE</a></li>
 							<li><a href="plan.jsp">행동 PLAN</a></li>
 							<li class="active"><a href="board.jsp">항아리 BOARD</a></li>
@@ -107,6 +114,16 @@
 							</section>
 
 					</div>
+<c:set var="i" value="1"/>
+			<c:forEach var="item" items="${list}">
+			<tr>
+				<td>${i}</td>
+				<td><a href="board_write.jsp?num=${item.num}">${item.title}</a></td>
+				<td>${item.writer}</td>
+				<td>${item.day}</td>
+			</tr>
+			<c:set var="i" value="${i+1}" />
+			</c:forEach>
 
 				<!-- Footer -->
 					<footer id="footer">

@@ -1,3 +1,8 @@
+<%@page import="com.BoardDTO"%>  
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.BoardDAO"%>
+<%@ page import = "java.sql.*"%>
+
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
@@ -14,7 +19,6 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -27,7 +31,7 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="home.html">HOME</a></li>
+							<li><a href="home.html">HOME</a></li>
 							<li><a href="mypage.jsp">MY PAGE</a></li>
 							<li><a href="plan.jsp">행동 PLAN</a></li>
 							<li class="active"><a href="board.jsp">항아리 BOARD</a></li>
@@ -51,13 +55,16 @@
 												<tr>
 													<th>NUM</th>
 													<th>Description</th>
+													<th>WRITER</th>
 													<th>DATE</th>
 												</tr>
 											</thead>
+											
 											<tbody>
 												<tr>
 													<td>1</td>
 													<td>hello</td>
+													<td>스마트</td>
 													<td>2020.10.01</td>
 												</tr>
 											</tbody>

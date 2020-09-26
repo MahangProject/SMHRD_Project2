@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
-
+<c:if test = "${id == null}">
+	<c:redirect url = "home.html"/>
+</c:if>	
 <!DOCTYPE HTML>
 <html>
 
@@ -98,24 +100,7 @@
 
 						console.log(list);
 						
-					/* 	$(list).click(function(){
-							if($(this).is(":checked")){
-						  	$(this).parent().addClass("checked");
-						    // ëë css()ë¥¼ ë°ë¡ ì ì©í  ìë ìë¤.
-						    //$(this).parent().css("background","#ffff00"); 
-						  }else{
-						  	$(this).parent().removeClass("checked");
-						  }
-						});
-
-						$(".chk_for").click(function(){
-							_id = $(this).attr("id");
-							if($(this).is(":checked")){
-						  	$("label[for='"+_id+"']").addClass("checked");
-						  }else{
-						  	$("label[for='"+_id+"']").removeClass("checked");
-						  }
-						})	 */
+		
 						
 						
 						
