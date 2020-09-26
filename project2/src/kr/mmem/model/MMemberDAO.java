@@ -162,12 +162,8 @@ public class MMemberDAO {
 			dbClose();
 		}
 		return cnt;
-
-		
-		
 	}
 	
-	//★★★★ 고쳐야함.
 	public int testScoreUpdate(int score, String id) {
 		conn = getConnect();
 		String SQL = "update mmember set RSES=? where id = ?"; //이거 고쳐야한다.
@@ -184,9 +180,25 @@ public class MMemberDAO {
 			dbClose();
 		}
 		return cnt;
-
-		
-		
 	}
-
+	
+	public int testScoreLoad(String id) {
+		conn = getConnect();
+		String SQL = "select RSES from mmember where id=?"; //이거 고쳐야한다.
+		int cnt = -1;
+		int rses = 0;
+		try {
+			ps = conn.prepareStatement(SQL);
+			ps.setString(1,id);
+			rs = ps.executeQuery();
+			if (rs.next()) {
+				rses = rs.getInt("rses");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			dbClose();
+		}
+		return rses;
+	}
 }

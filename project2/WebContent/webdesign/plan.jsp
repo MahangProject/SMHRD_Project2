@@ -39,7 +39,11 @@ body {
 }
 
 /* Style the list items */
+<<<<<<< HEAD
 #leegiseong {
+=======
+#myUL li {
+>>>>>>> branch 'master' of https://github.com/MahangProject/SMHRD_Project2.git
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
@@ -56,24 +60,40 @@ body {
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
+<<<<<<< HEAD
 #leegiseong:nth-child(odd) {
+=======
+#myUL li:nth-child(odd) {
+>>>>>>> branch 'master' of https://github.com/MahangProject/SMHRD_Project2.git
   background: #f9f9f9;
 }
 
 /* Darker background-color on hover */
+<<<<<<< HEAD
 #leegiseong:hover {
+=======
+#myUL li:hover {
+>>>>>>> branch 'master' of https://github.com/MahangProject/SMHRD_Project2.git
   background: #ddd;
 }
 
 /* When clicked on, add a background color and strike out text */
+<<<<<<< HEAD
 #leegiseong.checked {
+=======
+#myUL li.checked {
+>>>>>>> branch 'master' of https://github.com/MahangProject/SMHRD_Project2.git
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
 /* Add a "checked" mark when clicked on */
+<<<<<<< HEAD
 #leegiseong.checked::before {
+=======
+#myUL li.checked::before {
+>>>>>>> branch 'master' of https://github.com/MahangProject/SMHRD_Project2.git
   content: '';
   position: absolute;
   border-color: #fff;
@@ -198,6 +218,7 @@ body {
 					
 					
 						// Create a "close" button and append it to each list item
+						//var myNodelist = document.getElementsByTagName("LI");
 						var myNodelist = document.getElementsByTagName("LI");
 						var i;
 						for (i = 0; i < myNodelist.length; i++) {
@@ -213,15 +234,22 @@ body {
 						var i;
 						for (i = 0; i < close.length; i++) {
 							close[i].onclick = function () {
-								console.log(this);
 								var div = this.parentElement;
-								console.log(div);
 								console.log(div.innerHTML.replace('<span class="close">×</span>',''));
-								/* $ajax({
-									url: 'plan2.jsp',
+								$.ajax({
+									url: '/project2/myplanmake',
 									type: 'post',
-									data: 
-								}); */
+									data: {
+										do_list1: div.innerHTML.replace('<span class="close">×</span>',''),
+										success1: 1
+									},
+									success : function(t){ 
+			                             alert('성공!');
+			               } ,
+			               error : function(){
+			                         alert('실패 ㅠㅠ');
+			               }
+			               });
 								div.style.display = "none";
 							}
 						}
@@ -271,6 +299,20 @@ body {
 						  for (i = 0; i < close.length; i++) {
 						    close[i].onclick = function() {
 						      var div = this.parentElement;
+						      $.ajax({
+									url: '/project2/myplanmake',
+									type: 'post',
+									data: {
+										do_list1: div.innerHTML.replace('<span class="close">×</span>',''),
+										success1: 1
+									},
+									success : function(t){ 
+			                             alert('성공!');
+			               } ,
+			               error : function(){
+			                         alert('실패 ㅠㅠ');
+			               }
+			               });
 						      div.style.display = "none";
 						    }
 						  }
