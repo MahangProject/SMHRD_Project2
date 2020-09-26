@@ -2,7 +2,7 @@
     pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
-	String userId = request.getParameter("id");
+	String id = (String)session.getAttribute("id");
 %>  
 
 <!DOCTYPE HTML>
@@ -32,7 +32,7 @@ ul {
 }
 
 /* Style the list items */
-ul li {
+#myUL li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
@@ -49,24 +49,24 @@ ul li {
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
+#myUL li:nth-child(odd) {
   background: #f9f9f9;
 }
 
 /* Darker background-color on hover */
-ul li:hover {
+#myUL li:hover {
   background: #ddd;
 }
 
 /* When clicked on, add a background color and strike out text */
-ul li.checked {
+#myUL li.checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
 /* Add a "checked" mark when clicked on */
-ul li.checked::before {
+#myUL li.checked::before {
   content: '';
   position: absolute;
   border-color: #fff;
@@ -95,7 +95,7 @@ ul li.checked::before {
 /* Style the header */
 .header {
   padding: 30px 40px;
-  color: white;
+  color: black;
   text-align: center;
 }
 
@@ -189,6 +189,7 @@ input {
 					
 					
 						// Create a "close" button and append it to each list item
+						//var myNodelist = document.getElementsByTagName("LI");
 						var myNodelist = document.getElementsByTagName("LI");
 						var i;
 						for (i = 0; i < myNodelist.length; i++) {
@@ -204,21 +205,29 @@ input {
 						var i;
 						for (i = 0; i < close.length; i++) {
 							close[i].onclick = function () {
-								console.log(this);
 								var div = this.parentElement;
-								console.log(div);
 								console.log(div.innerHTML.replace('<span class="close">×</span>',''));
-								/* $ajax({
+								$ajax({
 									url: 'plan2.jsp',
 									type: 'post',
-									data: 
-								}); */
+									data: {
+										id: <%=id%>,
+										do_list1: div.innerHTML.replace('<span class="close">×</span>',''),
+										success1: 1
+									},
+									success : function(t){ 
+			                             alert('성공!');
+			               } ,
+			               error : function(){
+			                         alert('실패 ㅠㅠ');
+			               }
+			               });
 								div.style.display = "none";
 							}
 						}
 
 						// Add a "checked" symbol when clicking on a list item
-						var list = document.querySelector('ul');
+						var list = document.querySelector('ul#myUL');
 						list.addEventListener('click', function(ev) {
 						  if (ev.target.tagName === 'LI') {
 						    ev.target.classList.toggle('checked');
@@ -279,6 +288,8 @@ input {
 						  for (i = 0; i < close.length; i++) {
 						    close[i].onclick = function() {
 						      var div = this.parentElement;
+								console.log(div.innerHTML.replace('<span class="close">×</span>',''));
+								
 						      div.style.display = "none";
 						    }
 						  }
