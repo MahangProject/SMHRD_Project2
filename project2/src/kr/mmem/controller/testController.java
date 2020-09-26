@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.websocket.Session;
 
 import org.apache.catalina.startup.SetAllPropertiesRule;
 
@@ -44,26 +45,28 @@ public class testController extends HttpServlet {
 			
 			out.print(sum);
 			System.out.println(sum);
-//			request.setAttribute("sum", sum);
-//			RequestDispatcher rd = request.getRequestDispatcher("mmember.jsp"); //어디로 보낼까? 이 점수를 .
-//			rd.forward(request, response);
-			
+			/*
+			 * request.setAttribute("sum", sum); RequestDispatcher rd =
+			 * request.getRequestDispatcher("home.html"); //어디로 보낼까? 이 점수를 . 홈으로.
+			 * rd.forward(request, response);
+			 */
 			
 			MMemberDAO dao = new MMemberDAO();
 //github.com/MahangProject/SMHRD_Project2.git
 			
 			//dao.testScoreUpdate(score); >> test Score
+			String id = request.getParameter("id");
 			
-			
-			int cnt = dao.testScoreUpdate(sum, "test1");
+			System.out.println(id);
+			int cnt = dao.testScoreUpdate(sum,id);
 			
 			if(cnt>0) {
 				System.out.println("입력 성공");
-				out.print("변경성공");
-				
-//				response.sendRedirect("main.html");
+				out.print("success");
+				response.sendRedirect("/project2/webdesign/home.html");
 			}else {
-				out.print("실패");
+				out.print("fail");
+				response.sendRedirect("/project2/webdesign/mypage.jsp");
 			}
 
 

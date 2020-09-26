@@ -17,6 +17,10 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css"/>
+	
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
 	<style>
 body {
   margin: 0;
@@ -29,13 +33,13 @@ body {
 }
 
 /* Remove margins and padding from the list */
-ul {
+#leegiseong {
   margin: 0;
   padding: 0;
 }
 
 /* Style the list items */
-ul li {
+#leegiseong {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
@@ -52,24 +56,24 @@ ul li {
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
+#leegiseong:nth-child(odd) {
   background: #f9f9f9;
 }
 
 /* Darker background-color on hover */
-ul li:hover {
+#leegiseong:hover {
   background: #ddd;
 }
 
 /* When clicked on, add a background color and strike out text */
-ul li.checked {
+#leegiseong.checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
 /* Add a "checked" mark when clicked on */
-ul li.checked::before {
+#leegiseong.checked::before {
   content: '';
   position: absolute;
   border-color: #fff;
@@ -90,7 +94,7 @@ ul li.checked::before {
   padding: 12px 16px 12px 16px;
 }
 
-.close:hover {
+#leegiseong.close:hover {
   background-color: #f44336;
   color: white;
 }
@@ -98,7 +102,7 @@ ul li.checked::before {
 /* Style the header */
 .header {
   padding: 30px 40px;
-  color: white;
+  color: black;
   text-align: center;
 }
 
@@ -110,7 +114,7 @@ ul li.checked::before {
 }
 
 /* Style the input */
-input {
+#myinput.input {
   margin: 0;
   border: none;
   border-radius: 0;
@@ -137,9 +141,10 @@ input {
 .addBtn:hover {
   background-color: #bbb;
 }
-</style>
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</style>	
+		
+		
+		
 </head>
 
 <body class="is-preload">
@@ -153,17 +158,18 @@ input {
 		</header>
 
 
-		<!-- Nav -->
-		<nav id="nav">
-			<ul class="links">
-							<li><a href="home.html">HOME</a></li>
+		
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li ><a href="home.html">HOME</a></li>
 							<li><a href="mypage.jsp">MY PAGE</a></li>
 							<li class="active"><a href="plan.jsp">행동 PLAN</a></li>
 							<li><a href="board.jsp">항아리 BOARD</a></li>
 							<li><a href="page.jsp">도서 PAGE</a></li>
 						</ul>
-		</nav>
-
+					</nav>
+					
 		<!-- Main -->
 		<div id="main">
 
@@ -185,7 +191,7 @@ input {
 					</div>
 
 					<ul id="myUL">						
-						<li class ="checked">my book</li> 
+						<li class ="checked" id = "leegiseong">my book</li> 
 					</ul>
 
 					<script>
@@ -221,12 +227,12 @@ input {
 						}
 
 						// Add a "checked" symbol when clicking on a list item
-						var list = document.querySelector('ul');
+						var list = document.querySelector('ul#myUL');
 						list.addEventListener('click', function(ev) {
 						  if (ev.target.tagName === 'LI') {
 						    ev.target.classList.toggle('checked');
 						  }
-						}, false);
+						},false);
 						/* 
 						// Add a "checked" symbol when clicking on a list item
 						var list = document.querySelector('li');
