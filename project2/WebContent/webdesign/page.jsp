@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page import="java.util.*"%>
 <%@page import="kr.mmem.model.*"%>
@@ -12,6 +11,7 @@
 %>
 <c:if test="${id == null}">
 	<c:redirect url="home.jsp" />
+
 </c:if>
 <!DOCTYPE HTML>
 <html>
@@ -27,6 +27,7 @@
 </noscript>
 </head>
 <body class="is-preload">
+
 
 	<!-- Wrapper -->
 	<div id="wrapper">
