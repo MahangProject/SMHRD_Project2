@@ -35,7 +35,7 @@
 							<li><a href="mypage.jsp">MY PAGE</a></li>
 							<li><a href="plan.jsp">행동 PLAN</a></li>
 							<li class="active"><a href="board.jsp">항아리 BOARD</a></li>
-							<li><a href="page.jsp">도서 PAGE</a></li>
+							<li><a href="../booklist">도서 PAGE</a></li>
 						</ul>
 					</nav>
 
