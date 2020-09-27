@@ -6,6 +6,19 @@
 </c:if>	
 <%
 	String userId = request.getParameter("id");
+	String imgfile = "";
+	int score = (Integer)session.getAttribute("score");
+	if (score >= 40){
+		imgfile = "tree5.png";
+	}else if (score >= 30){
+		imgfile = "tree4.png";
+	}else if (score >= 30){
+		imgfile = "tree3.png";
+	}else if (score >= 10){
+		imgfile = "tree2.png";
+	}else{
+		imgfile = "tree1.png";
+	}
 %>  
 
 <!DOCTYPE HTML>
@@ -176,11 +189,10 @@ ul {
 			<!-- Post -->
 			<section class="post">
 				<header class="major">
-					<img src="./views/img/book1.jpg" width="300px" height="400px"/>
 					<h1>행동<br />
 						PLAN</h1>
+				<img src="../views/img/<%=imgfile%>" width="150px" height="200px"/>
 				</header>
-
 				<body>
 
 					<div id="myDIV" class="header">
@@ -192,7 +204,7 @@ ul {
 					</div>
 
 					<ul id="myUL">						
-						<li class ="checked" id = "leegiseong">my book</li> 
+						<li class ="checked">my book</li> 
 					</ul>
 
 					<script>
@@ -200,7 +212,7 @@ ul {
 					
 						// Create a "close" button and append it to each list item
 						//var myNodelist = document.getElementsByTagName("LI");
-						var myNodelist = document.getElementsByTagName("LI");
+						var myNodelist = document.querySelectorAll("#myUL li");
 						var i;
 						for (i = 0; i < myNodelist.length; i++) {
 							var span = document.createElement("SPAN");

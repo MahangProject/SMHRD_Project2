@@ -1,7 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%
-	int score = (Integer)session.getAttribute("rses");
+	session = request.getSession(false);
+	int score = 0;
+	if(session.getAttribute("rses")==null){}else{
+	score = (Integer)session.getAttribute("rses");}
 %>
 <!DOCTYPE HTML>
 <html>
