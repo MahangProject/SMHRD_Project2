@@ -60,8 +60,7 @@
 				</header>
 				<form action="http://localhost:9000/mahang/bookrecommend" method="get">
 				<input style='font-family: gothic; font-size: 30pt; border: bold;'
-					type="text" name="id" value="<%=id%>" />
-				<h4>님 환영합니다.</h4>
+					type="hidden" name="id" value="<%=id%>" />
 				<input type="text" name="bookname" /><input type="submit" value="도서 추천" />
 				<table border='1'>
 					<tr>
