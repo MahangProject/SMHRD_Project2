@@ -37,7 +37,7 @@ public class MMemberInsertController extends HttpServlet {
 			out.print("회원가입 성공");
 			// 리스트페이지로 다시 보내기(응답을 리스트페이지로 다시 보내기: /list)
 			//sendRedirect
-			response.sendRedirect("/project2/home.html");
+			response.sendRedirect("/project2/home.jsp");
 			
 		}else {
 			//실패

@@ -65,7 +65,7 @@ public class testController extends HttpServlet {
 				System.out.println("입력 성공");
 				out.print("success");
 				session.setAttribute("rses", sum);
-				response.sendRedirect("/project2/webdesign/home.html");
+				response.sendRedirect("/project2/webdesign/home.jsp");
 			}else {
 				out.print("fail");
 				response.sendRedirect("/project2/webdesign/mypage.jsp");

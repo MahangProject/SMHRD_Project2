@@ -50,6 +50,7 @@ public class MMemberLoginController extends HttpServlet {
 			session.setAttribute("id", id); // 객체 바인딩(session) 
 			MMemberDAO dao = new MMemberDAO();
 			session.setAttribute("rses", dao.testScoreLoad(id));
+			System.out.println(session.getAttribute("rses"));
 			response.sendRedirect("/project2/webdesign/plan.jsp");
 			
 		}else {
@@ -57,7 +58,7 @@ public class MMemberLoginController extends HttpServlet {
 			//page를 바꾸는 기술 >> 	1. forwarding 
 							  //2. response.sendredirect
 			
-			response.sendRedirect("/project2/webdesign/home.html"); //실패했으니 다시 로그인으로 보내버림.
+			response.sendRedirect("/project2/webdesign/home.jsp"); //실패했으니 다시 로그인으로 보내버림.
 		}	
 		
 		

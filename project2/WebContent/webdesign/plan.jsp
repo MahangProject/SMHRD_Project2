@@ -2,7 +2,7 @@
     pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:if test = "${id == null}">
-	<c:redirect url = "home.html"/>
+	<c:redirect url = "home.jsp"/>
 </c:if>	
 <%
 	String userId = request.getParameter("id");
@@ -154,7 +154,7 @@ ul {
 
 		<!-- Header -->
 		<header id="header">
-			<a href="home.html" class="logo">MA_HANG</a>
+			<a href="home.jsp" class="logo">MA_HANG</a>
 		</header>
 
 
@@ -162,7 +162,7 @@ ul {
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li ><a href="home.html">HOME</a></li>
+							<li ><a href="home.jsp">HOME</a></li>
 							<li><a href="mypage.jsp">MY PAGE</a></li>
 							<li class="active"><a href="plan.jsp">행동 PLAN</a></li>
 							<li><a href="board.jsp">항아리 BOARD</a></li>
