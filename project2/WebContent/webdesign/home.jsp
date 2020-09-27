@@ -32,7 +32,7 @@
 						<ul class="actions">
 							
 							<li><form action ="/project2/test.html"><button type="submit" >
-							<span id="result"><%=score%></span>
+							<span id="result">RSESÁ¡¼ö : <%=score%></span>
 							</button></form></li>
 								</ul>
 						<ul class="actions">

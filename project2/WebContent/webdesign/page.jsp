@@ -3,7 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
 
 <c:if test = "${id == null}">
-	<c:redirect url = "home.jsp"/>
+	<c:redirect url = "home.html"/>
 </c:if>
 <!DOCTYPE HTML>
 <html>
@@ -21,7 +21,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="home.jsp" class="logo">MA_HANG</a>
+						<a href="home.html" class="logo">MA_HANG</a>
 					</header>
 
 			<!-- Nav -->

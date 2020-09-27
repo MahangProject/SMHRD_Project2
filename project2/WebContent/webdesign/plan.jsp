@@ -304,6 +304,7 @@ ul {
 									},
 									success : function(t){ 
 			                             alert('성공!');
+			                             /* location.reload(); */
 			               } ,
 			               error : function(){
 			                         alert('실패 ㅠㅠ');
