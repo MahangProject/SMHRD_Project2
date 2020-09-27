@@ -1,107 +1,126 @@
-<%@page import="com.BoardDTO"%>  
-<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Date"%>
+<%@page import="com.BoardDTO"%>
+<%@page import="java.util.*"%>
 <%@page import="com.BoardDAO"%>
-<%@ page import = "java.sql.*"%>
 
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
-<c:if test = "${id == null}">
-	<c:redirect url = "home.jsp"/>
+	pageEncoding="utf-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<%@ page import="java.text.SimpleDateFormat" %>
+<%
+   Date nowTime = new Date();
+   SimpleDateFormat sf = new SimpleDateFormat("yyyy년 MM월 dd일");
+%>
+
+
+<c:if test="${id == null}">
+	<c:redirect url="home.jsp" />
 </c:if>
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>MA_HANG</title>
-		<meta charset="euc-kr" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+<title>MA_HANG</title>
+<meta charset="euc-kr" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<noscript>
+	<link rel="stylesheet" href="assets/css/noscript.css" />
+</noscript>
+</head>
+<body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<a href="home.jsp" class="logo">MA_HANG</a>
-					</header>
-				<p>확인</p>
-					
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="home.jsp">HOME</a></li>
-							<li><a href="mypage.jsp">MY PAGE</a></li>
-							<li><a href="plan.jsp">행동 PLAN</a></li>
-							<li class="active"><a href="board.jsp">항아리 BOARD</a></li>
-							<li><a href="page.jsp">도서 PAGE</a></li>
-						</ul>
-					</nav>
+		<!-- Header -->
+		<header id="header">
+			<a href="home.jsp" class="logo">MA_HANG</a>
+		</header>
+		<p>확인</p>
 
-				<!-- Main -->
-					<div id="main">
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="home.jsp">HOME</a></li>
+				<li><a href="mypage.jsp">MY PAGE</a></li>
+				<li><a href="plan.jsp">행동 PLAN</a></li>
+				<li class="active"><a href="board.jsp">항아리 BOARD</a></li>
+				<li><a href="page.jsp">도서 PAGE</a></li>
+			</ul>
+		</nav>
 
-						<!-- Post -->
-							<section class="post">
-								<header class="major">
-									<h1>항아리<br />
-									BOARD</h1>
+		<!-- Main -->
+		<div id="main">
 
-									<h3>LIST</h3>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>NUM</th>
-													<th>Description</th>
-													<th>WRITER</th>
-													<th>DATE</th>
-												</tr>
-											</thead>
-											
-											<tbody>
-												<tr>
-													<td>1</td>
-													<td>hello</td>
-													<td>스마트</td>
-													<td>2020.10.01</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</header>
-							</section>
+			<!-- Post -->
+			<section class="post">
+				<header class="major">
+					<h1>
+						항아리<br /> BOARD
+					</h1>
 
-					</div>
+					<h3>LIST</h3>
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<th>NUM</th>
+									<th>Description</th>
+									<th>WRITER</th>
+									<th>DATE</th>
+								</tr>
+							</thead>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
+							<tbody>
+								<tr>
 
-							<ul class="actions">
-										<a href="board.jsp" class="button fit">WRITE</a>
-									</ul>
-						</section>
-					</footer>
+									<td>1</td>
+									<td><ul class="actions special">
+											<a href="home.jsp">hello</a>
+										</ul></td>
+									<td>${id}</td>
+									<td><%= sf.format(nowTime) %></td>
 
-					</div>
+</body>
 
-			</div>
+</html>
+</tr>
+</tbody>
+<tfoot>
+	<tr>
+		<td colspan="2"></td>
+	</tr>
+</tfoot>
+</table>
+</div>
+</header>
+</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+</div>
 
-	</body>
+<!-- Footer -->
+<footer id="footer">
+	<section>
+
+		<ul class="actions">
+			<a href="board.jsp" class="button fit">WRITE</a>
+		</ul>
+	</section>
+</footer>
+
+</div>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
 </html>
