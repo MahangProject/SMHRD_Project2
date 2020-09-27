@@ -31,7 +31,8 @@ public class BookListController extends HttpServlet {
 				request.setAttribute("list", list); // 객체바인딩
 				request.setAttribute("list2", list2);
 				request.setAttribute("list3", list3);
-				RequestDispatcher rd = request.getRequestDispatcher("/views/book/bookpage.jsp");
+				System.out.println(list.get(0));
+				RequestDispatcher rd = request.getRequestDispatcher("/webdesign/page.jsp");
 				rd.forward(request, response);
 		
 	}

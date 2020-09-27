@@ -48,11 +48,11 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="home.html">HOME</a></li>
+							<li class="active"><a href="home.jsp">HOME</a></li>
 							<li><a href="mypage.jsp">MY PAGE</a></li>
 							<li><a href="plan.jsp">행동 PLAN</a></li>
 							<li><a href="board.jsp">항아리 BOARD</a></li>
-							<li><a href="page.jsp">도서 PAGE</a></li>
+							<li><a href="../booklist">도서 PAGE</a></li>
 						</ul>
 					</nav>
 
@@ -85,7 +85,7 @@
 								</article>
 								<article>
 									<ul class="actions special">
-										<li><a href="page.jsp" class="button" >도서 PAGE</a></li>
+										<li><a href="/project2/booklist" class="button" >도서 PAGE</a></li>
 									</ul>
 								
 							</section>
