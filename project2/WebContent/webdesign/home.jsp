@@ -104,7 +104,7 @@
 									</div>
 									<div class="field"> 
 										<label for="password">비밀번호</label>
-										<input type="text" name="pwd" id="pwd" />
+										<input type="password" name="pwd" id="pwd" />
 									</div>
 									<div class="field">
 									</div>

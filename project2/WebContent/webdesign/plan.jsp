@@ -303,7 +303,7 @@ ul {
 										success1: 1
 									},
 									success : function(t){ 
-			                             alert('성공!');
+			                            /*  alert('성공!'); */
 			                             /* location.reload(); */
 			               } ,
 			               error : function(){
