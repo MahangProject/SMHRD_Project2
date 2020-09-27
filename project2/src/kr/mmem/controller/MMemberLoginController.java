@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import kr.mmem.model.MMemberDAO;
+import kr.mmem.model.*;
 
 @WebServlet("/mmemlogin")
 public class MMemberLoginController extends HttpServlet {
@@ -50,7 +50,15 @@ public class MMemberLoginController extends HttpServlet {
 			session.setAttribute("id", id); // 객체 바인딩(session) 
 			MMemberDAO dao = new MMemberDAO();
 			session.setAttribute("rses", dao.testScoreLoad(id));
-			System.out.println(session.getAttribute("rses"));
+			planDAO dao2 = new planDAO();
+			int score = 0;
+			ArrayList<planVO> list = dao2.planAllList();
+			if (list.isEmpty()) {
+			}else {
+				System.out.println("미션스코어:"+list.get(0).getMission_score());
+				score = list.get(0).getMission_score();
+			}
+			session.setAttribute("score", score);
 			response.sendRedirect("/project2/webdesign/plan.jsp");
 			
 		}else {
