@@ -176,6 +176,7 @@ ul {
 			<!-- Post -->
 			<section class="post">
 				<header class="major">
+					<img src="./views/img/book1.jpg" width="300px" height="400px"/>
 					<h1>행동<br />
 						PLAN</h1>
 				</header>

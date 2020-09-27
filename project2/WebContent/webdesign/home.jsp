@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%
+	int score = (Integer)session.getAttribute("rses");
+%>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -26,7 +29,7 @@
 						<ul class="actions">
 							
 							<li><form action ="/project2/test.html"><button type="submit" >
-							<span id="result">자존감</span>
+							<span id="result"><%=score%></span>
 							</button></form></li>
 								</ul>
 						<ul class="actions">
@@ -56,15 +59,17 @@
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
-									<h2><a href="#">OUR MENU<br/>
+									<h2>OUR MENU<br/>
 								</header>
-								<ul class="actions special">
-									<li><a href="mypage.jsp" class="button">MY PAGE</a></li>
-								</ul>
 							</article>
 
 						<!-- Posts -->
 							<section class="posts">
+								<article>
+									<ul class="actions special">
+										<li><a href="mypage.jsp" class="button">MY PAGE</a></li>
+									</ul>
+								</article>
 								<article>
 									<ul class="actions special">
 										<li><a href="plan.jsp" class="button">행동 PLAN</a></li>
@@ -119,11 +124,7 @@
 			</div>
 
 		<!-- Scripts -->
-		
-			<script type="text/javascript">let score = sessionStorage.getItem("rses");
-			console.log(score);
-			document.getElementById("result").innerHTML=score;
-			</script>
+
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
