@@ -59,25 +59,25 @@
 					</h1>
 				</header>
 				<form action="http://localhost:9000/mahang/bookrecommend" method="get">
-				<input style='font-family: gothic; background-color: beige; font-size: 30pt; border: none;'
+				<input style='font-family: gothic; font-size: 30pt; border: bold;'
 					type="text" name="id" value="<%=id%>" />
 				<h4>님 환영합니다.</h4>
 				<input type="text" name="bookname" /><input type="submit" value="도서 추천" />
 				<table border='1'>
 					<tr>
-						<td><strong>책 제목</strong></td>
-						<td><strong>분야</strong></td>
-						<td><strong>책 소개</strong></td>
-						<td><strong>사용자 평점</strong></td>
+						<td><strong style=font-family:gothic; font-size:20pt; text-align:justify;>책 제목</strong></td>
+						<td><strong style=font-family:gothic; font-size:20pt; text-align:justify;>분야</strong></td>
+						<td><strong style=font-family:gothic; font-size:20pt; text-align:justify;>책 소개</strong></td>
+						<td><strong style=font-family:gothic; font-size:20pt; text-align:justify;>사용자 평점</strong></td>
 					</tr>
 					<%
 						for (int i = 0; i < 165; i++) {
 					%>
 					<tr>
-						<td><%=list.get(i).getB_name()%></td>
-						<td><%=list.get(i).getB_category()%></td>
-						<td><a href=<%=list.get(i).getB_url()%>>책 소개 페이지로</a></td>
-						<td><%=list2[i]%></td>
+						<td><strong style=font-family:gothic; font-size:8pt;><%=list.get(i).getB_name()%></style></td>
+						<td><strong style=font-family:gothic; font-size:8pt;><%=list.get(i).getB_category()%></style></td>
+						<td><strong style=font-family:gothic; font-size:8pt;><a href=<%=list.get(i).getB_url()%>>책 소개 페이지로</a></style></td>
+						<td><strong style=font-family:gothic; font-size:8pt;><%=list2[i]%></style></td>
 					</tr>
 					<%
 						}
