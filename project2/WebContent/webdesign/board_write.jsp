@@ -33,11 +33,30 @@
 	<!-- Wrapper -->
 	<div id="wrapper">
 
+<<<<<<< HEAD
 		<!-- Header -->
 		<header id="header">
 			<a href="home.jsp" class="logo">MA_HANG</a>
 		</header>
 		<p>확인</p>
+=======
+				<!-- Header -->
+					<header id="header">
+						<a href="home.jsp" class="logo">MA_HANG</a>
+					</header>
+				<p>확인</p>
+					
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="home.jsp">HOME</a></li>
+							<li><a href="mypage.jsp">MY PAGE</a></li>
+							<li><a href="plan.jsp">행동 PLAN</a></li>
+							<li class="active"><a href="board.jsp">항아리 BOARD</a></li>
+							<li><a href="../booklist">도서 PAGE</a></li>
+						</ul>
+					</nav>
+>>>>>>> branch 'master' of https://github.com/MahangProject/SMHRD_Project2.git
 
 		<!-- Nav -->
 		<nav id="nav">

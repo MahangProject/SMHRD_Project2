@@ -40,10 +40,10 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="links">
-				<li><a href="home.jsp">HOME</a></li>
-				<li><a href="mypage.jsp">MY PAGE</a></li>
-				<li><a href="plan.jsp">행동 PLAN</a></li>
-				<li><a href="board.jsp">항아리 BOARD</a></li>
+				<li><a href="webdesign/home.jsp">HOME</a></li>
+				<li><a href="webdesign/mypage.jsp">MY PAGE</a></li>
+				<li><a href="webdesign/plan.jsp">행동 PLAN</a></li>
+				<li><a href="webdesign/board.jsp">항아리 BOARD</a></li>
 				<li class="active"><a href="../booklist">도서 PAGE</a></li>
 			</ul>
 		</nav>
@@ -59,25 +59,24 @@
 					</h1>
 				</header>
 				<form action="http://localhost:9000/mahang/bookrecommend" method="get">
-				<input style='font-family: gothic; background-color: beige; font-size: 30pt; border: none;'
-					type="text" name="id" value="<%=id%>" />
-				<h4>님 환영합니다.</h4>
+				<input style='font-family: gothic; font-size: 30pt; border: bold;'
+					type="hidden" name="id" value="<%=id%>" />
 				<input type="text" name="bookname" /><input type="submit" value="도서 추천" />
 				<table border='1'>
 					<tr>
-						<td><strong>책 제목</strong></td>
-						<td><strong>분야</strong></td>
-						<td><strong>책 소개</strong></td>
-						<td><strong>사용자 평점</strong></td>
+						<td><strong style=font-family:gothic; font-size:20pt; text-align:justify;>책 제목</strong></td>
+						<td><strong style=font-family:gothic; font-size:20pt; text-align:justify;>분야</strong></td>
+						<td><strong style=font-family:gothic; font-size:20pt; text-align:justify;>책 소개</strong></td>
+						<td><strong style=font-family:gothic; font-size:20pt; text-align:justify;>사용자 평점</strong></td>
 					</tr>
 					<%
 						for (int i = 0; i < 165; i++) {
 					%>
 					<tr>
-						<td><%=list.get(i).getB_name()%></td>
-						<td><%=list.get(i).getB_category()%></td>
-						<td><a href=<%=list.get(i).getB_url()%>>책 소개 페이지로</a></td>
-						<td><%=list2[i]%></td>
+						<td><strong style=font-family:gothic; font-size:8pt;><%=list.get(i).getB_name()%></style></td>
+						<td><strong style=font-family:gothic; font-size:8pt;><%=list.get(i).getB_category()%></style></td>
+						<td><strong style=font-family:gothic; font-size:8pt;><a href=<%=list.get(i).getB_url()%>>책 소개 페이지로</a></style></td>
+						<td><strong style=font-family:gothic; font-size:8pt;><%=list2[i]%></style></td>
 					</tr>
 					<%
 						}
