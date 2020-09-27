@@ -33,17 +33,13 @@ body {
 }
 
 /* Remove margins and padding from the list */
-#leegiseong {
+ul {
   margin: 0;
   padding: 0;
 }
 
 /* Style the list items */
-<<<<<<< HEAD
-#leegiseong {
-=======
 #myUL li {
->>>>>>> branch 'master' of https://github.com/MahangProject/SMHRD_Project2.git
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
@@ -60,40 +56,24 @@ body {
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
-<<<<<<< HEAD
-#leegiseong:nth-child(odd) {
-=======
 #myUL li:nth-child(odd) {
->>>>>>> branch 'master' of https://github.com/MahangProject/SMHRD_Project2.git
   background: #f9f9f9;
 }
 
 /* Darker background-color on hover */
-<<<<<<< HEAD
-#leegiseong:hover {
-=======
 #myUL li:hover {
->>>>>>> branch 'master' of https://github.com/MahangProject/SMHRD_Project2.git
   background: #ddd;
 }
 
 /* When clicked on, add a background color and strike out text */
-<<<<<<< HEAD
-#leegiseong.checked {
-=======
 #myUL li.checked {
->>>>>>> branch 'master' of https://github.com/MahangProject/SMHRD_Project2.git
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
 /* Add a "checked" mark when clicked on */
-<<<<<<< HEAD
-#leegiseong.checked::before {
-=======
 #myUL li.checked::before {
->>>>>>> branch 'master' of https://github.com/MahangProject/SMHRD_Project2.git
   content: '';
   position: absolute;
   border-color: #fff;
@@ -114,7 +94,7 @@ body {
   padding: 12px 16px 12px 16px;
 }
 
-#leegiseong.close:hover {
+.close:hover {
   background-color: #f44336;
   color: white;
 }
