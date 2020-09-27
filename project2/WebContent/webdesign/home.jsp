@@ -42,7 +42,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="home.html" class="logo">MA_HANG</a>
+						<a href="home.jsp" class="logo">MA_HANG</a>
 					</header>
 
 				<!-- Nav -->
