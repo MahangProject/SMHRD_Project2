@@ -105,6 +105,8 @@ ul {
   right: 0;
   top: 0;
   padding: 12px 16px 12px 16px;
+  font-weight:700;
+  font-family: "고딕";
 }
 
 .close:hover {
@@ -192,19 +194,20 @@ ul {
 					<h1>행동<br />
 						PLAN</h1>
 				<img src="../views/img/<%=imgfile%>" width="150px" height="200px"/>
+				<h3>실천점수 <%=score%>점</h3>
 				</header>
 				<body>
 
 					<div id="myDIV" class="header">
 
 						<h2 style="margin:5px">To Do List</h2>
-						<input type="text" id="myInput" placeholder="Title..."> 
+						<input type="text" id="myInput" placeholder="오늘의 계획을 세워보세요"> 
 
-						<span onclick="newElement()" class="addBtn">Add</span>
+						<span onclick="newElement()" class="addBtn" style=" font-weight: 700;">ADD</span>
 					</div>
 
 					<ul id="myUL">						
-						<li class ="checked">my book</li> 
+						<!-- <li class ="checked">my book</li> --> 
 					</ul>
 
 					<script>
@@ -216,7 +219,7 @@ ul {
 						var i;
 						for (i = 0; i < myNodelist.length; i++) {
 							var span = document.createElement("SPAN");
-							var txt = document.createTextNode("\u00D7");
+							var txt = document.createTextNode("O");
 							span.className = "close";
 							span.appendChild(txt);
 							myNodelist[i].appendChild(span);
@@ -228,12 +231,12 @@ ul {
 						for (i = 0; i < close.length; i++) {
 							close[i].onclick = function () {
 								var div = this.parentElement;
-								console.log(div.innerHTML.replace('<span class="close">×</span>',''));
+								console.log(div.innerHTML.replace('<span class="close">O</span>',''));
 								$.ajax({
 									url: '/project2/myplanmake',
 									type: 'post',
 									data: {
-										do_list1: div.innerHTML.replace('<span class="close">×</span>',''),
+										do_list1: div.innerHTML.replace('<span class="close">O</span>',''),
 										success1: 1
 									},
 									success : function(t){ 
@@ -284,7 +287,7 @@ ul {
 						  document.getElementById("myInput").value = "";
 
 						  var span = document.createElement("SPAN");
-						  var txt = document.createTextNode("\u00D7");
+						  var txt = document.createTextNode("O");
 						  span.className = "close";
 						  span.appendChild(txt);
 						  li.appendChild(span);
@@ -296,7 +299,7 @@ ul {
 									url: '/project2/myplanmake',
 									type: 'post',
 									data: {
-										do_list1: div.innerHTML.replace('<span class="close">×</span>',''),
+										do_list1: div.innerHTML.replace('<span class="close">O</span>',''),
 										success1: 1
 									},
 									success : function(t){ 
