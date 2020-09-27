@@ -40,10 +40,10 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="links">
-				<li><a href="home.jsp">HOME</a></li>
-				<li><a href="mypage.jsp">MY PAGE</a></li>
-				<li><a href="plan.jsp">행동 PLAN</a></li>
-				<li><a href="board.jsp">항아리 BOARD</a></li>
+				<li><a href="webdesign/home.jsp">HOME</a></li>
+				<li><a href="webdesign/mypage.jsp">MY PAGE</a></li>
+				<li><a href="webdesign/plan.jsp">행동 PLAN</a></li>
+				<li><a href="webdesign/board.jsp">항아리 BOARD</a></li>
 				<li class="active"><a href="../booklist">도서 PAGE</a></li>
 			</ul>
 		</nav>
