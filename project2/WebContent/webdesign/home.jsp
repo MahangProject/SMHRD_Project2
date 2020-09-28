@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%
-	session = request.getSession(false);
-	int score = 0;
-	if(session.getAttribute("rses")==null){}else{
+	session = request.getSession(false); //세션이 없으면 null, 있으면 가져오기
+	int score = 0; // rses점수값 초기화
+	if(session.getAttribute("rses")==null){//rses점수 입력 안됐으면 0
+	}else{//rses점수 가져오기
 	score = (Integer)session.getAttribute("rses");}
 %>
 <!DOCTYPE HTML>
@@ -32,10 +33,10 @@
 						<ul class="actions">
 							
 							<li><form action ="/project2/test.html"><button type="submit" >
-							<span id="result">RSES점수 : <%=score%></span>
+							<span id="result">RSES점수 : <%=score%></span><!-- rses 점수 표시 -->
 							</button></form></li>
 								</ul>
-						<ul class="actions">
+						<ul class="actions"><!-- 아래로 버튼(화살표) -->
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
 					</div>
@@ -47,7 +48,7 @@
 
 				<!-- Nav -->
 					<nav id="nav">
-						<ul class="links">
+						<ul class="links"><!-- 메뉴바 -->
 							<li class="active"><a href="home.jsp">HOME</a></li>
 							<li><a href="mypage.jsp">MY PAGE</a></li>
 							<li><a href="plan.jsp">행동 PLAN</a></li>
@@ -66,7 +67,7 @@
 								</header>
 							</article>
 
-						<!-- Posts -->
+						<!-- Posts : 각 페이지 링크 -->
 							<section class="posts">
 								<article>
 									<ul class="actions special">
@@ -85,7 +86,7 @@
 								</article>
 								<article>
 									<ul class="actions special">
-										<li><a href="/project2/booklist" class="button" >도서 PAGE</a></li>
+										<li><a href="../booklist" class="button" >도서 PAGE</a></li>
 									</ul>
 								
 							</section>
@@ -96,7 +97,7 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="get" action="/project2/mmemlogin">
+							<form method="get" action="/project2/mmemlogin"><!-- 로그인 -->
 								<div class="fields">
 									<div class="field">
 										<label for="name">아이디</label>
@@ -113,8 +114,7 @@
 
 									<li><input type="submit" value="SIGN IN"/></li>
 									<li><input type="button" value="SIGN UP" onclick ="location.href='/project2/webdesign/mypage.jsp'"//></li>
-
-
+									<!-- 회원가입페이지로 이동 -->
 								</ul>
 							</form>
 						</section>

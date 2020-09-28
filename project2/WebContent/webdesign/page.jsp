@@ -4,10 +4,10 @@
 <%@page import="kr.mmem.model.*"%>
 <%
 	response.setCharacterEncoding("UTF-8");
-	String id = "whizzerscowl";
-	ArrayList<BookVO> list = (ArrayList<BookVO>) request.getAttribute("list");
-	double[] list2 = (double[]) request.getAttribute("list2");
-	ArrayList<MMemberVO> list3 = (ArrayList<MMemberVO>) request.getAttribute("list3");
+	String id = "whizzerscowl"; // 사용자 ID
+	ArrayList<BookVO> list = (ArrayList<BookVO>) request.getAttribute("list"); // 책 전체 리스트
+	double[] list2 = (double[]) request.getAttribute("list2"); // 사용자가 평가한 전체 평점 목록
+	ArrayList<MMemberVO> list3 = (ArrayList<MMemberVO>) request.getAttribute("list3"); // 전체 사용자 목록
 %>
 <c:if test="${id == null}">
 	<c:redirect url="home.jsp" />
@@ -58,9 +58,8 @@
 						도서<br /> PAGE
 					</h1>
 				</header>
-				<form action="http://localhost:9000/mahang/bookrecommend" method="get">
-				<input style='font-family: gothic; font-size: 30pt; border: bold;'
-					type="hidden" name="id" value="<%=id%>" />
+				<form action="http://localhost:9000/mahang/bookrecommend" method="get"> <!-- submit 시 플라스크로 전송 -->
+				<input type="hidden" name="id" value="<%=id%>" /><!-- id도 같이 전송하기 위해 hidden으로 생성 -->
 				<input type="text" name="bookname" /><input type="submit" value="도서 추천" />
 				<table border='1'>
 					<tr>
@@ -69,7 +68,7 @@
 						<td><strong style=font-family:gothic; font-size:20pt; text-align:justify;>책 소개</strong></td>
 						<td><strong style=font-family:gothic; font-size:20pt; text-align:justify;>사용자 평점</strong></td>
 					</tr>
-					<%
+					<%	//책 전체 목록(list) 불러오기(list2:평점목록)
 						for (int i = 0; i < 165; i++) {
 					%>
 					<tr>

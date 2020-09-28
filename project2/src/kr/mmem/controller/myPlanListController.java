@@ -17,20 +17,11 @@ import kr.mmem.model.planVO;
 public class myPlanListController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-	
-		// 전체리스트 출력
 		planDAO dao = new planDAO();
-		ArrayList<planVO> list = dao.planAllList();
-		System.out.println(list);
-		//객체 바인딩 합시당
+		ArrayList<planVO> list = dao.planAllList(); // 행동계획표 전체 목록
 		
-		request.setAttribute("list", list);
-		RequestDispatcher rd = request.getRequestDispatcher("plan.jsp"); // 요청을 의뢰할 페이지를 얻어오기
+		request.setAttribute("list", list); // 행동계획표 전체 목록 객체 바인딩
+		RequestDispatcher rd = request.getRequestDispatcher("plan.jsp"); // 행동계획표 페이지로 포워딩
 		rd.forward(request, response);
-	
-	
-	
-	
 	}
-
 }

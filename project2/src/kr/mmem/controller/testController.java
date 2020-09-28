@@ -26,6 +26,7 @@ public class testController extends HttpServlet {
 		
 			PrintWriter out = response.getWriter();
 			
+			// RSES 진단 테스트 각 문항 별 점수들 가져오기
 			int score1= Integer.parseInt(request.getParameter("test_Rses1"));
 			int score2= Integer.parseInt(request.getParameter("test_Rses2"));
 			int score3= Integer.parseInt(request.getParameter("test_Rses3"));
@@ -38,33 +39,20 @@ public class testController extends HttpServlet {
 			int score10= Integer.parseInt(request.getParameter("test_Rses10"));
 			int sum =score1+score2+score3+score4+score5+score6+score7+score8+score9+score10; //사용자총점.
 			
-			
-		
 			//=========================================================================================test 값
 	
-			
-			
 			out.print(sum);
-			System.out.println(sum);
-			/*
-			 * request.setAttribute("sum", sum); RequestDispatcher rd =
-			 * request.getRequestDispatcher("home.html"); //어디로 보낼까? 이 점수를 . 홈으로.
-			 * rd.forward(request, response);
-			 */
 			
 			MMemberDAO dao = new MMemberDAO();
-//github.com/MahangProject/SMHRD_Project2.git
-			
-			//dao.testScoreUpdate(score); >> test Score
 
-			HttpSession session = request.getSession();
-			String id = (String)session.getAttribute("id");
-			int cnt = dao.testScoreUpdate(sum, id);
+			HttpSession session = request.getSession(); // 세션 가져오기
+			String id = (String)session.getAttribute("id"); // id 가져오기
+			int cnt = dao.testScoreUpdate(sum, id); // RSES 진단 결과 갱신
 			
 			if(cnt>0) {
 				System.out.println("입력 성공");
 				out.print("success");
-				session.setAttribute("rses", sum);
+				session.setAttribute("rses", sum); // 홈페이지에 RSES점수를 표시하기 위해 객체 바인딩
 				response.sendRedirect("/project2/webdesign/home.jsp");
 			}else {
 				out.print("fail");

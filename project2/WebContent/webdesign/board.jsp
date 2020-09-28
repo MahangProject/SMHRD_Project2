@@ -4,11 +4,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
-<c:if test="${id == null}">
-	<c:redirect url="home.jsp" />
-</c:if>
 
-<c:if test = "${id == null}">
+<c:if test = "${id == null}"><!-- 미로그인 시 홈으로 -->
 	<c:redirect url = "home.jsp"/>
 </c:if>
 <!DOCTYPE HTML>
@@ -70,7 +67,7 @@
 						
 						<div class="col-12">
 												<select name="demo-category" id="demo-category">
-													<option value="">- Choose Today's WEATHER -</option>
+													<option value="">- Choose Today's WEATHER -</option><!-- 날씨 입력 -->
 													<option value="1"><span style='font-size:100px;'>&#9748;</span></option>
 													<option value="1"><span style='font-size:100px;'>&#127774;</span></option>
 													<option value="1"><span style='font-size:100px;'>&#10052;</span></option>
@@ -89,7 +86,7 @@
 					<tr>
 						<div class="col-12">
 												<select name="demo-category" id="demo-category">
-													<option value="">- Choose Today's MOOD-</option>
+													<option value="">- Choose Today's MOOD-</option><!-- 오늘 기분 입력 -->
 													<option value="1"><span style='font-size:100px;'>&#128522;</span></option>
 													<option value="1"><span style='font-size:100px;'>&#128532;</span></option>
 													<option value="1"><span style='font-size:100px;'>&#128544;</span></option>
@@ -103,6 +100,7 @@
 			</div>
 			<!-- Scripts -->
 			<script>
+				//글을 작성한 날짜 저장
   				document.getElementById('currentDate').value = new Date().toISOString().substring(0, 10);;
 			</script>
 										<table>
@@ -117,6 +115,7 @@
 							</section>
 
 					</div>
+					<!-- 아래의 for문 작동 안하는듯? -->
 <c:set var="i" value="1"/>
 			<c:forEach var="item" items="${list}">
 			<tr>

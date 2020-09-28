@@ -43,7 +43,7 @@ public class WriterBoard extends HttpServlet {
 		
 		BoardDTO dto = new BoardDTO(title, writer, content);  // 메소드 수를 줄였으니 오버로딩 중복정의 해줘야함
 		BoardDAO dao = new BoardDAO();
-		int cnt = dao.upload(dto);
+		int cnt = dao.upload(dto);	//글쓰기
 
 		if (cnt>0) {
 			System.out.println("업로드 성공");

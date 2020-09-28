@@ -7,8 +7,8 @@
 <%
 	String userId = request.getParameter("id");
 	String imgfile = "";
-	int score = (Integer)session.getAttribute("score");
-	if (score >= 40){
+	int score = (Integer)session.getAttribute("score"); // 실천점수 가져오기
+	if (score >= 40){ // 점수별로 나무 이미지 바꿔서 출력
 		imgfile = "tree5.png";
 	}else if (score >= 30){
 		imgfile = "tree4.png";
@@ -23,17 +23,13 @@
 
 <!DOCTYPE HTML>
 <html>
-
 <head>
-	
 	<title>plan</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css"/>
-	
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		
 	<style>
 body {
   margin: 0;
@@ -157,9 +153,6 @@ ul {
   background-color: #bbb;
 }
 </style>	
-		
-		
-		
 </head>
 
 <body class="is-preload">
@@ -171,8 +164,6 @@ ul {
 		<header id="header">
 			<a href="home.jsp" class="logo">MA_HANG</a>
 		</header>
-
-
 		
 				<!-- Nav -->
 					<nav id="nav">
@@ -193,28 +184,23 @@ ul {
 				<header class="major">
 					<h1>행동<br />
 						PLAN</h1>
-				<img src="../views/img/<%=imgfile%>" width="150px" height="200px"/>
+				<img src="../views/img/<%=imgfile%>" width="150px" height="200px"/><!-- 실천점수에 해당하는 나무 이미지 -->
 				<h3>실천점수 <%=score%>점</h3>
 				</header>
 				<body>
-
-					<div id="myDIV" class="header">
-
+				
+					<div id="myDIV" class="header"><!-- 오늘 실천할 행동 계획 -->
 						<h2 style="margin:5px">To Do List</h2>
 						<input type="text" id="myInput" placeholder="오늘의 계획을 세워보세요"> 
-
 						<span onclick="newElement()" class="addBtn" style=" font-weight: 700;">ADD</span>
 					</div>
 
 					<ul id="myUL">						
-						<!-- <li class ="checked">my book</li> --> 
 					</ul>
 
 					<script>
 					
-					
-						// Create a "close" button and append it to each list item
-						//var myNodelist = document.getElementsByTagName("LI");
+						// Create a "close" button and append it to each list item(이미 만들어진 목록에 O버튼 만들기, 사용 안 함)
 						var myNodelist = document.querySelectorAll("#myUL li");
 						var i;
 						for (i = 0; i < myNodelist.length; i++) {
@@ -226,12 +212,12 @@ ul {
 						}
 
 						// Click on a close button to hide the current list item
+						// (이미 만들어진 목록에서 O버튼 누르면 홈페이지에서 그 행동 없애기, db에 저장, 사용 안 함)
 						var close = document.getElementsByClassName("close");
 						var i;
 						for (i = 0; i < close.length; i++) {
 							close[i].onclick = function () {
 								var div = this.parentElement;
-								console.log(div.innerHTML.replace('<span class="close">O</span>',''));
 								$.ajax({
 									url: '/project2/myplanmake',
 									type: 'post',
@@ -251,50 +237,38 @@ ul {
 						}
 
 						// Add a "checked" symbol when clicking on a list item
+						// 클릭시 체크 표시(안해도 DB에 잘 저장 됨.....)
 						var list = document.querySelector('ul#myUL');
 						list.addEventListener('click', function(ev) {
 						  if (ev.target.tagName === 'LI') {
 						    ev.target.classList.toggle('checked');
 						  }
 						},false);
-						/* 
-						// Add a "checked" symbol when clicking on a list item
-						var list = document.querySelector('li');
-						list.addEventListener('click', function (ev) {
-							if (ev.target.tagName === 'LI') {
-								ev.target.classList.addClass("checked");
-								
-							}
-						}, false); */
-
-						console.log(list);
-						
-		
-						
-						
 
 						// Create a new list item when clicking on the "Add" button
+						// Add버튼으로 새로운 행동 생성(O버튼까지 구현)
 						function newElement() {
-						  var li = document.createElement("li");
-						  var inputValue = document.getElementById("myInput").value;
-						  var t = document.createTextNode(inputValue);
-						  li.appendChild(t);
-						  if (inputValue === '') {
+						  var li = document.createElement("li"); // li만들기
+						  var inputValue = document.getElementById("myInput").value; // 입력한 내용
+						  var t = document.createTextNode(inputValue);	// 을 저장
+						  li.appendChild(t); // li에 입력한 내용 삽입
+						  if (inputValue === '') { // 입력한 내용이 없을 때
 						    alert("You must write something!");
 						  } else {
-						    document.getElementById("myUL").appendChild(li);
+						    document.getElementById("myUL").appendChild(li); // myUL에 li 추가
 						  }
-						  document.getElementById("myInput").value = "";
+						  document.getElementById("myInput").value = ""; // input 비우기(이미 입력값을 저장했으므로)
 
-						  var span = document.createElement("SPAN");
+						  var span = document.createElement("SPAN"); //span태그
 						  var txt = document.createTextNode("O");
-						  span.className = "close";
-						  span.appendChild(txt);
-						  li.appendChild(span);
+						  span.className = "close"; //클래스를 close로
+						  span.appendChild(txt); //O를 span태그 내용에 삽입
+						  li.appendChild(span); //li에 스팬태그 삽입
 
 						  for (i = 0; i < close.length; i++) {
-						    close[i].onclick = function() {
+						    close[i].onclick = function() { // O버튼 클릭시 기능
 						      var div = this.parentElement;
+						      // ajax로 행동계획표를 저장할 수 있게 데이터 전송
 						      $.ajax({
 									url: '/project2/myplanmake',
 									type: 'post',
@@ -314,54 +288,10 @@ ul {
 						    }
 						  }
 						}
-						/* // Create a new list item when clicking on the "Add" button
-						function newElement() {
-							var li = document.createElement("li");
-							var inputValue = document.getElementById("myInput").value;
-							var t = document.createTextNode(inputValue);
-							li.appendChild(t);
-							if (inputValue === '') {//add button í´ë¦­ì ìë¡ ìì±.
-								alert("You must write something!"); 
-							} else {
-								document.getElementById("myUL").appendChild(li);
-							}
-							document.getElementById("myInput").value = ""; //reset
-
-							var span = document.createElement("SPAN");
-							var txt = document.createTextNode("\u00D7");
-							span.className = "close";
-							span.appendChild(txt);
-							li.appendChild(span);
-
-							for (i = 0; i < close.length; i++) {
-								close[i].onclick = function () {
-									var div = this.parentElement;
-									div.style.display = "none";
-								}
-							}
-						} */
 					</script>
-
 				</body>
-
-</html>
-
-
-
 							</section>
-
 					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<section>
-							</section>
-						</section>
-					</footer>
-
-					</div>
-
 			</div>
 
 		<!-- Scripts -->

@@ -18,7 +18,7 @@ public class MMemberInsertController extends HttpServlet {
 			throws ServletException, IOException {
 		
 		request.setCharacterEncoding("euc-kr");
-		
+		//request에 저장된 사용자 정보 가져오기
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
@@ -28,7 +28,7 @@ public class MMemberInsertController extends HttpServlet {
 		
 		MMemberVO vo = new MMemberVO(id, pw, name, email, age, gender);
 		MMemberDAO dao = new MMemberDAO();
-		int cnt = dao.mmemberInsert(vo);
+		int cnt = dao.mmemberInsert(vo); // 회원가입
 		
 		response.setContentType("text/html;charset=euc-kr");
 		PrintWriter out = response.getWriter();

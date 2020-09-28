@@ -10,11 +10,10 @@
 <%@ page import="java.text.SimpleDateFormat" %>
 <%
    Date nowTime = new Date();
-   SimpleDateFormat sf = new SimpleDateFormat("yyyy년 MM월 dd일");
+   SimpleDateFormat sf = new SimpleDateFormat("yyyy년 MM월 dd일"); // 날짜 가져오기
 %>
 
-
-<c:if test="${id == null}">
+<c:if test="${id == null}"><!-- 미로그인 시 홈으로 -->
 	<c:redirect url="home.jsp" />
 </c:if>
 <!DOCTYPE HTML>
@@ -59,7 +58,7 @@
 						항아리<br /> BOARD
 					</h1>
 
-					<h3>LIST</h3>
+					<h3>LIST</h3><!-- 게시판 목록 출력 -->
 					<div class="table-wrapper">
 						<table>
 							<thead>

@@ -53,7 +53,7 @@ public class BoardDAO {
 		}
 	}
 
-	public int upload(BoardDTO dto) {
+	public int upload(BoardDTO dto) {	// 글쓰기
 		int cnt = 0;
 		
 		getConnection();
@@ -75,7 +75,7 @@ public class BoardDAO {
 		
 		return cnt;
 	}
-	public ArrayList<BoardDTO> viewAll() {
+	public ArrayList<BoardDTO> viewAll() {	//게시판 전체 보기
 		ArrayList<BoardDTO> list = new ArrayList<BoardDTO>();
 		
 		// jdbc를 통해
@@ -83,7 +83,7 @@ public class BoardDAO {
 		// 게시글을 읽을때 시간을 기순으로 내림차순으로 셀렉트 하시오. 
 		// 게시글 모든 정보를 DTO로 묶어 (번호, 제목, 작성자, 파일명, 내용, 시간) list에 담으시오
 		try {
-			String sql = "select*from board order by day desc";
+			String sql = "select * from board order by day desc";
 			psmt = conn.prepareStatement(sql);
 			rs = psmt.executeQuery();
 			while(rs.next()) {
@@ -107,12 +107,12 @@ public class BoardDAO {
 		return list;
 	}
 	
-	public BoardDTO viewOne(int viewNum) {
+	public BoardDTO viewOne(int viewNum) {	//글보기
 		BoardDTO dto = null;
 		getConnection();
 	
 		try {
-			String sql = "select*from board where num=?";
+			String sql = "select * from board where num=?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, viewNum);
 			rs = psmt.executeQuery();

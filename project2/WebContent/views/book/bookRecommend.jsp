@@ -8,13 +8,13 @@
 <title>Insert title here</title>
 </head> 
 <body>
-<%  //플라스크에서 받아온 값을 UTF-8로 인코딩
+<%  //플라스크에서 받아온 값(책 3권)을 UTF-8로 인코딩
 	String book1 = new String(request.getParameter("book1").getBytes("ISO-8859-1"), "UTF-8");
 	String book2 = new String(request.getParameter("book2").getBytes("ISO-8859-1"), "UTF-8");
 	String book3 = new String(request.getParameter("book3").getBytes("ISO-8859-1"), "UTF-8");
 %>
 <table border="1" align="center">
-<tr align="center"><%if (book1.equals("멀쩡한 어른 되긴 글렀군")){//임시로 보여주기용%>
+<tr align="center"><%if (book1.equals("멀쩡한 어른 되긴 글렀군")){//임시로 보여주기용,그림 클릭 시 책 소개 페이지로 이동%>
 	<td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=250044628">
 	<img src="./views/img/book1.jpg" width="300px" height="400px"/></a></td>
 	<td><a href="http://www.yes24.com/Product/Goods/90895702">
@@ -30,7 +30,7 @@
 	<img src="./views/img/book6.jpg" width="300px" height="400px"/></a></td>
 	<%} %>
 </tr>
-<tr align="center">
+<tr align="center"><!-- //플라스크로 받아온 책 제목 표기 -->
 	<td><%=book1%></td>
 	<td><%=book2%></td>
 	<td><%=book3%></td>

@@ -17,38 +17,28 @@ import kr.mmem.model.planVO;
 @WebServlet("/myplanmake")
 public class myPlanManageController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		response.setCharacterEncoding("utf-8"); //인코딩...
-		HttpSession session = request.getSession();
-		int cnt =0;
+		HttpSession session = request.getSession(); // 세션 가져오기
 		planDAO dao = new planDAO();
-		String plan1 = request.getParameter("do_list1");
-		//int success1 = Integer.parseInt(request.getParameter("success1"));
-		int success1 = Integer.parseInt(request.getParameter("success1"));
-		int score = 0;
-		ArrayList<planVO> list = dao.planAllList();
+		String plan1 = request.getParameter("do_list1"); // 사용자가 입력한 실천한 행동
+		int success1 = Integer.parseInt(request.getParameter("success1")); // 실천 성공 점수
+		ArrayList<planVO> list = dao.planAllList(); // 행동계획표 전체 목록(날짜별 내림차순)
+		int score = 0; // 실천점수 총점 초기화
 		if (list.isEmpty()) {
 		}else {
-			System.out.println("미션스코어:"+list.get(0).getMission_score());
-			score = list.get(0).getMission_score();
+			score = list.get(0).getMission_score(); // 실천 점수 총점 가져오기
 		}
+		
 		PrintWriter out = response.getWriter();
-		
-		out.print(plan1);//확인
-		out.print(success1);
-		
 		planVO dto = new planVO(plan1, success1, score);
-		cnt = dao.makePlan(dto);
-		session.setAttribute("score", score);
+		int cnt =0;
+		cnt = dao.makePlan(dto); // 행동과 점수를 db에 저장
+		session.setAttribute("score", score); // 총점을 화면에 나타내기 위해 객체 바인딩
 		if(cnt>0) {
-			System.out.println(plan1);
-			System.out.println(success1);
-			System.out.println("db삽입후"+score);
 			response.sendRedirect("/project2/webdesign/plan.jsp");
 		}else {
 			out.print("fail");
 		}
-		
-//		response.sendRedirect("/Mahang_Project/myplan");
 	}
-
 }

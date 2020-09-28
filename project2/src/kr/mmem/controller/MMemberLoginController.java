@@ -18,70 +18,33 @@ public class MMemberLoginController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		// 클라이언트가 서버로 요청하면 클라이언트의 어떤 정보가 서버로 넘어온다.(패킷: 헤더(client의 IP-addr)+
-		// 바디(req.getParam)로 구성)
-
-		Enumeration<String> headerNames = request.getHeaderNames(); // enumeration
-
 		PrintWriter out = response.getWriter();
-		while (headerNames.hasMoreElements()) { // 헤더의 이름이 존재 하는지 안하는지 확인 boolean 반환
-
-			String name = headerNames.nextElement(); //>> cursor가 element를 가져온후 이동함.
-			String value = request.getHeader(name);
-			out.println(name+":"+value);
-			System.out.println(name+":"+value);
-		}
-		String ip = request.getRemoteHost(); // remote == client remotehost >> ip가져오기
-		out.println("Client IP :"+ ip);
 		request.setCharacterEncoding("euc-kr");
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
 		
-		//id = admin / pwd = admin
-		
-		if(id.equals("whizzerscowl")&&pwd.equals("1111")) {
-			// 회원 인증에 성공 -> 서비스 되는 페이지로 이동을 시켜줘야 겠지 .무엇이든지 만들어 주면 됨(Servlet, JSP)
-			//main.jsp, banking.jsp
+		if(id.equals("whizzerscowl")&&pwd.equals("1111")) { // 회원인증 성공
 			HttpSession session = request.getSession(); //session ID를 만드는 메소드 //sessionID공간할당.
 			System.out.println(session.getMaxInactiveInterval()); //session 지속되는 시간check
 			System.out.println(session.getId());
 			System.out.println(session.getLastAccessedTime());
 			System.out.println(session.getCreationTime()); //세션이 만들어진 시간.
-			session.setAttribute("id", id); // 객체 바인딩(session) 
+			session.setAttribute("id", id); // id 객체 바인딩(session) 
 			MMemberDAO dao = new MMemberDAO();
-			session.setAttribute("rses", dao.testScoreLoad(id));
+			session.setAttribute("rses", dao.testScoreLoad(id)); // 사용자의 rses점수를 불러와 객체 바인딩
 			planDAO dao2 = new planDAO();
-			int score = 0;
-			ArrayList<planVO> list = dao2.planAllList();
+			int score = 0; // 실천점수 초기화
+			ArrayList<planVO> list = dao2.planAllList(); // 행동계획표 목록
 			if (list.isEmpty()) {
-			}else {
-				System.out.println("미션스코어:"+list.get(0).getMission_score());
-				score = list.get(0).getMission_score();
+			}else {//행동계획표가 비어있지 않을 시
+				score = list.get(0).getMission_score(); // 실천점수 저장
 			}
-			session.setAttribute("score", score);
-			response.sendRedirect("/project2/webdesign/plan.jsp");
-			
+			session.setAttribute("score", score); // 실천점수 객체 바인딩
+			response.sendRedirect("/project2/webdesign/plan.jsp"); // 행동계획표로 리다이렉트
 		}else {
-			System.out.println("실패");
-			//page를 바꾸는 기술 >> 	1. forwarding 
-							  //2. response.sendredirect
-			
 			response.sendRedirect("/project2/webdesign/home.jsp"); //실패했으니 다시 로그인으로 보내버림.
 		}	
-		
-		
-			//>>client와 server가 session으로 인식을 한다. 변하지 않아 브라우저가 닫히지 않는다면. 
-		
-		// 1. 세션값(sessionID= 32 )을 가져온다. 
-		// 2. 세션ID값을 만든다. (JSESSIONID=100)
-		// 3. 만들어진 세션ID값을 클라이언트로 보낸다. 
-		
-		
-		
-		
-		
 	}
-
 }
 
 
