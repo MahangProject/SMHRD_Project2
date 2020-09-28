@@ -240,10 +240,6 @@
 								</ul>
 							</form>
 						</section>
-							</section>
-							<section>
-							</section>
-						</section>
 					</footer>
 
 
